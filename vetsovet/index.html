@@ -1,0 +1,122 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>VetСовет — Ветеринарная клиника в Казани</title>
+<meta name="description" content="Хирургия, терапия, вакцинация и диагностика для ваших питомцев.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Comfortaa:wght@500;700&family=Nunito:wght@400;600;800&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}
+.r{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .9s cubic-bezier(.2,.7,.2,1) var(--d,0s)}.r.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.r{opacity:1;transform:none}}
+
+:root{--cr:#fff8ef;--ink:#1d3347;--mut:#61758a;--tl:#1f8a9e;--tl2:#d6f0f3;--co:#ff8a65;--co2:#ffe3d8;--sun:#ffd166;--line:#f0e3d2}
+body{background:var(--cr);color:var(--ink);font:17px/1.6 Nunito,sans-serif}
+h1,h2,h3{font-family:Comfortaa,sans-serif;font-weight:700;line-height:1.1}
+.wrap{width:min(1160px,100% - 32px);margin:0 auto}
+.sos{background:var(--co);color:#fff;text-align:center;padding:10px 16px;font-weight:800;font-size:15px}
+.sos a{text-decoration:underline;text-underline-offset:3px}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0}
+.lg{font:700 24px Comfortaa;display:flex;align-items:center;gap:10px}.lg b{color:var(--tl)}
+.lg svg{width:34px;height:34px}
+.nv{display:flex;gap:24px;font-weight:600}.nv a:hover{color:var(--tl)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--tl);color:#fff;padding:15px 26px;border-radius:999px;font-weight:800;transition:transform .2s,background .2s}
+.btn:hover{transform:scale(1.04);background:#167487}
+.btn.c{background:var(--co)}.btn.w{background:#fff;color:var(--ink);box-shadow:0 6px 20px -10px rgba(0,0,0,.2)}
+.hero{display:grid;grid-template-columns:1fr 1fr;gap:30px;align-items:center;padding:30px 0 80px}
+.pill{display:inline-flex;gap:8px;align-items:center;background:var(--tl2);color:var(--tl);padding:8px 16px;border-radius:999px;font-weight:800;font-size:14px;margin-bottom:22px}
+.hero h1{font-size:clamp(44px,6vw,80px)}.hero h1 span{color:var(--co);position:relative;white-space:nowrap}
+.hero h1 span::after{content:"";position:absolute;left:0;right:0;bottom:4px;height:12px;background:var(--sun);border-radius:8px;z-index:-1;opacity:.8}
+.hero p{color:var(--mut);font-size:19px;margin:22px 0 30px;max-width:480px}
+.bb{display:flex;gap:12px;flex-wrap:wrap}
+.rt{display:flex;align-items:center;gap:14px;margin-top:30px}.rt b{font:700 34px Comfortaa}.rt .st{color:#f5b301}.rt small{color:var(--mut);display:block}
+.ill{position:relative;aspect-ratio:1}
+.ill .bg{position:absolute;inset:4%;background:var(--tl);border-radius:58% 42% 55% 45%/48% 55% 45% 52%;animation:mo 10s ease-in-out infinite}
+@keyframes mo{50%{border-radius:42% 58% 45% 55%/55% 45% 55% 45%;transform:rotate(6deg)}}
+.ill svg{position:absolute;inset:0;width:100%;height:100%}
+.bob{animation:bob 3.4s ease-in-out infinite}.bob2{animation:bob 3.4s -1.7s ease-in-out infinite}@keyframes bob{50%{transform:translateY(-10px)}}
+.blink{animation:bl 4s infinite;transform-box:fill-box;transform-origin:center}@keyframes bl{0%,94%,100%{transform:scaleY(1)}97%{transform:scaleY(.1)}}
+.tag{position:absolute;background:#fff;border-radius:18px;padding:12px 16px;font-weight:800;box-shadow:0 12px 30px -14px rgba(0,0,0,.3);font-size:15px}
+.tag small{display:block;color:var(--mut);font-weight:600;font-size:12px}
+.t1{left:-2%;top:12%;transform:rotate(-5deg)}.t2{right:-2%;bottom:10%;transform:rotate(4deg)}
+.sec{padding:100px 0 0}
+.hd{text-align:center;margin-bottom:46px}.hd h2{font-size:clamp(34px,4.6vw,58px)}.hd h2 span{color:var(--tl)}.hd p{color:var(--mut);margin-top:12px}
+.svc{display:grid;grid-template-columns:repeat(4,1fr);gap:16px}
+.sv{border-radius:30px;padding:28px 24px;transition:transform .3s}
+.sv:hover{transform:translateY(-8px) rotate(-1deg)}
+.sv .em{font-size:40px;display:block;margin-bottom:18px}
+.sv h3{font-size:21px;margin-bottom:8px}.sv p{color:var(--mut);font-size:15px}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.wy{background:#fff;border-radius:30px;padding:30px;border:2px dashed var(--line);text-align:center}
+.wy .em{font-size:44px}.wy h3{font-size:22px;margin:12px 0 8px}.wy p{color:var(--mut)}
+.docs{display:grid;grid-template-columns:repeat(3,1fr);gap:16px}
+.dc{background:#fff;border-radius:30px;padding:26px;display:flex;gap:18px;align-items:center;box-shadow:0 14px 40px -26px rgba(29,51,71,.35);position:relative;overflow:hidden}
+.dc .av{width:70px;height:70px;border-radius:50%;flex:none;display:grid;place-items:center;font:700 28px Comfortaa;color:#fff}
+.dc b{display:block;font-size:18px;line-height:1.25}.dc span{color:var(--mut);font-size:14px}
+.dc::after{content:"🐾";position:absolute;right:14px;bottom:8px;font-size:26px;opacity:.15}
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(280px,1fr));gap:22px}
+.rv{background:#fff;border-radius:30px 30px 30px 6px;padding:28px;box-shadow:0 14px 40px -26px rgba(29,51,71,.35)}
+.rv .st{color:#f5b301;margin-bottom:10px}.rv p{font-size:18px}.rv span{display:flex;gap:8px;align-items:center;margin-top:16px;color:var(--mut);font-weight:700;font-size:14px}
+.rv span i{width:32px;height:32px;border-radius:50%;background:var(--tl2);display:grid;place-items:center;font-style:normal}
+.ct{display:grid;grid-template-columns:1fr 1.15fr;gap:16px;margin-bottom:70px}
+.cb{background:var(--tl);color:#fff;border-radius:34px;padding:clamp(26px,4vw,46px);position:relative;overflow:hidden}
+.cb::after{content:"🐾";position:absolute;right:-10px;bottom:-30px;font-size:180px;opacity:.12;transform:rotate(-20deg)}
+.cb h2{font-size:clamp(30px,3.6vw,46px)}.cb .ph{display:block;font:700 clamp(28px,3.2vw,40px) Comfortaa;margin:18px 0 22px;color:var(--sun)}
+.cb p{margin-bottom:12px;opacity:.95}.cb small{display:block;opacity:.75}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px;position:relative;z-index:2}.chip{background:rgba(255,255,255,.16);padding:9px 16px;border-radius:999px;font-weight:700;font-size:14px}.chip:hover{background:#fff;color:var(--tl)}
+.mp{border-radius:34px;overflow:hidden;min-height:420px;border:6px solid #fff;box-shadow:0 14px 40px -26px rgba(29,51,71,.4)}.mp iframe{width:100%;height:100%;min-height:408px;border:0;display:block}
+footer{padding:0 0 40px;color:var(--mut);font-weight:600;font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+.paw{position:absolute;font-size:22px;opacity:0;pointer-events:none;animation:pw 2.6s ease forwards;z-index:1}
+@keyframes pw{15%{opacity:.35}100%{opacity:0;transform:translateY(-20px)}}
+@media(max-width:940px){.nv{display:none}.hero,.ct{grid-template-columns:1fr}.svc{grid-template-columns:1fr 1fr}.why,.docs{grid-template-columns:1fr}.ill{max-width:440px;margin:0 auto;width:100%}}
+.hero>*{min-width:0}
+@media(max-width:480px){.hero h1{font-size:clamp(30px,9.4vw,44px)}.svc{grid-template-columns:1fr}}
+</style></head>
+<body>
+<div class="sos">Питомцу нужна помощь? Звоните: <a href="tel:+78432640107">+7 (843) 264-01-07</a> · Ежедневно 09:00–20:00</div>
+<div class="wrap">
+<nav><a class="lg" href="#top"><svg viewBox="0 0 40 40"><circle cx="20" cy="20" r="20" fill="#1f8a9e"/><path d="M14 20h12M20 14v12" stroke="#fff" stroke-width="4" stroke-linecap="round"/></svg>Vet<b>Совет</b></a>
+<div class="nv"><a href="#svc">Услуги</a><a href="#docs">Врачи</a><a href="#rev">Отзывы</a><a href="#ct">Контакты</a></div>
+<a class="btn" href="tel:+78432640107">Записаться</a></nav>
+<header class="hero" id="top"><div>
+ <span class="pill">🐾 Ветеринарная клиника · мкр Мирный</span>
+ <h1>Качественно&nbsp;—<br><span>не значит</span><br>дорого!</h1>
+ <p>Хирургия, терапия, вакцинация и диагностика для ваших питомцев. Операции, стерилизация и кастрация, лечение зубов, УЗИ и рентген, вакцинация и экстренная помощь. Хирургический кабинет работает по предварительной записи. Рядом есть парковка.</p>
+ <div class="bb"><a class="btn" href="tel:+78432640107">📞 Записаться на приём</a><a class="btn w" href="#ct">Как добраться</a></div>
+ <div class="rt"><b>4.9</b><div><div class="st"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div><small>344 оценки владельцев в 2ГИС</small></div></div>
+</div>
+<div class="ill"><div class="bg"></div><svg viewBox="0 0 400 400" aria-hidden="true">
+<g class="bob"><g transform="translate(70 140)">
+ <path d="M10 30 L30 -30 L60 20 Z" fill="#f4b860"/><path d="M150 20 L180 -30 L200 30 Z" fill="#f4b860"/>
+ <ellipse cx="105" cy="80" rx="100" ry="88" fill="#ffd166"/>
+ <path d="M24 26 L34 -14 L52 18 Z" fill="#ffb3a7"/><path d="M158 18 L176 -14 L186 26 Z" fill="#ffb3a7"/>
+ <ellipse class="blink" cx="70" cy="74" rx="11" ry="14" fill="#1d3347"/><ellipse class="blink" cx="140" cy="74" rx="11" ry="14" fill="#1d3347"/>
+ <circle cx="74" cy="69" r="4" fill="#fff"/><circle cx="144" cy="69" r="4" fill="#fff"/>
+ <path d="M96 100 h18 l-9 10z" fill="#ff8a65"/><path d="M105 110 q-12 14 -24 6 M105 110 q12 14 24 6" stroke="#1d3347" stroke-width="3" fill="none" stroke-linecap="round"/>
+ <path d="M30 104 h-40 M30 116 l-36 10 M180 104 h40 M180 116 l36 10" stroke="#1d3347" stroke-width="2.5" stroke-linecap="round"/>
+</g></g>
+<g class="bob2"><g transform="translate(200 210)">
+ <ellipse cx="20" cy="40" rx="34" ry="62" fill="#a0613a" transform="rotate(20 20 40)"/><ellipse cx="160" cy="40" rx="34" ry="62" fill="#a0613a" transform="rotate(-20 160 40)"/>
+ <ellipse cx="90" cy="70" rx="80" ry="76" fill="#e9a46b"/><ellipse cx="90" cy="110" rx="46" ry="34" fill="#fbe0c4"/>
+ <circle class="blink" cx="60" cy="62" r="10" fill="#1d3347"/><circle class="blink" cx="120" cy="62" r="10" fill="#1d3347"/>
+ <circle cx="63" cy="58" r="3.5" fill="#fff"/><circle cx="123" cy="58" r="3.5" fill="#fff"/>
+ <ellipse cx="90" cy="94" rx="15" ry="11" fill="#1d3347"/><path d="M90 104 v10" stroke="#1d3347" stroke-width="3"/>
+ <path d="M80 118 q10 26 20 0 z" fill="#ff8a65"/>
+</g></g></svg><div class="tag t1">🚗 Есть парковка<small>рядом с клиникой</small></div><div class="tag t2">🕘 Ежедневно 09:00–20:00<small>хирургия по записи</small></div></div></header>
+
+<section class="sec" id="svc"><div class="hd"><h2 class="r">Чем мы <span>поможем</span></h2><p>Хирургия · терапия · вакцинация</p></div><div class="svc"><div class="sv r" style="background:#d6f0f3;--d:0.0s"><span class="em">🩺</span><h3>Хирургия</h3><p>Операции, в том числе сложные. По предварительной записи.</p></div><div class="sv r" style="background:#ffe3d8;--d:0.05s"><span class="em">✂️</span><h3>Стерилизация и кастрация</h3><p>Плановые операции.</p></div><div class="sv r" style="background:#fff1c9;--d:0.1s"><span class="em">💊</span><h3>Терапия</h3><p>Консультации и лечение.</p></div><div class="sv r" style="background:#e8e4ff;--d:0.15000000000000002s"><span class="em">💉</span><h3>Вакцинация</h3><p>Плановые прививки.</p></div><div class="sv r" style="background:#dff3e1;--d:0.2s"><span class="em">🦷</span><h3>Стоматология</h3><p>Лечение и удаление зубов.</p></div><div class="sv r" style="background:#fde2ef;--d:0.25s"><span class="em">🔬</span><h3>УЗИ и рентген</h3><p>Диагностика на месте.</p></div><div class="sv r" style="background:#e3ecff;--d:0.30000000000000004s"><span class="em">🚑</span><h3>Экстренная помощь</h3><p>Когда помощь нужна срочно.</p></div><div class="sv r" style="background:#fff0e0;--d:0.35000000000000003s"><span class="em">🐾</span><h3>Уход</h3><p>Стрижка когтей.</p></div></div></section>
+<section class="sec"><div class="hd"><h2 class="r">Почему нам <span>доверяют</span></h2></div><div class="why"><div class="wy r"><div class="em">❤️</div><h3>С большим сердцем</h3><p>Врачей благодарят за спасённых питомцев.</p></div><div class="wy r"><div class="em">💰</div><h3>Доступные цены</h3><p>Владельцы отмечают приемлемую стоимость услуг.</p></div><div class="wy r"><div class="em">🚗</div><h3>Парковка</h3><p>Удобно приехать с питомцем на машине.</p></div></div></section>
+<section class="sec" id="docs"><div class="hd"><h2 class="r">Врачи, которых благодарят</h2><p>Имена из отзывов владельцев в 2ГИС</p></div><div class="docs"><div class="dc r"><div class="av" style="background:#1f8a9e">А</div><div><b>Аркадий Алексеевич Бирев</b><span>ветеринарный врач, хирург</span></div></div><div class="dc r"><div class="av" style="background:#ff8a65">А</div><div><b>Анастасия</b><span>ветеринарный врач</span></div></div><div class="dc r"><div class="av" style="background:#e5a93a">Е</div><div><b>Евгений</b><span>хирург</span></div></div><div class="dc r"><div class="av" style="background:#7c6cd8">М</div><div><b>Марина</b><span>ветеринарный врач</span></div></div><div class="dc r"><div class="av" style="background:#3aa676">Л</div><div><b>Лилия</b><span>УЗИ</span></div></div><div class="dc r"><div class="av" style="background:#d0679a">К</div><div><b>Кристина</b><span>администратор</span></div></div></div></section>
+<section class="sec" id="rev"><div class="hd"><h2 class="r">344 оценки, <span>4.9 ★</span></h2><p>Что пишут владельцы питомцев</p></div><div class="revs"><figure class="rv r"><div class="st"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div><p>«Спасли собаку, врач Анастасия самая лучшая!»</p><span><i>🐶</i>Мария · 2ГИС</span></figure><figure class="rv r"><div class="st"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div><p>«Доктор Аркадий как доктор Айболит, врач с большим сердцем и золотыми руками»</p><span><i>🐱</i>Татьяна · 2ГИС</span></figure><figure class="rv r"><div class="st"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div><p>«Квалифицированные врачи, есть место для парковки, дешёвые цены на услуги»</p><span><i>🐾</i>Альбина · 2ГИС</span></figure><figure class="rv r"><div class="st"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div><p>«Бирев А.А. -доктор от бога, осмотрел нашего уличного кота и сделал сложную операцию.»</p><span><i>🐶</i>Гульфия · 2ГИС</span></figure><figure class="rv r"><div class="st"><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div><p>«Всё сделали быстро, профессионально и по очень приемлемой цене.»</p><span><i>🐱</i>Ирина · 2ГИС</span></figure></div></section>
+<section class="sec" id="ct"><div class="ct"><div class="cb r"><h2>Ждём вас<br>с питомцем</h2><a class="ph" href="tel:+78432640107">+7 (843) 264-01-07</a>
+ <p>ул. Онежская, 2а<small>мкр Мирный, Приволжский район, Казань</small></p><p>Ежедневно 09:00–20:00<small>Хирургия по предварительной записи. В праздники уточняйте время</small></p>
+ <div class="chips"><a class="chip" href="https://wa.me/79376240107" target="_blank" rel="noopener">WhatsApp</a><a class="chip" href="https://t.me/Vet_Sovet_kzn" target="_blank" rel="noopener">Telegram</a><a class="chip" href="mailto:vetsovet@inbox.ru" target="_blank" rel="noopener">Почта</a><a class="chip" href="https://2gis.ru/kazan/firm/2956015536937750" target="_blank" rel="noopener">2ГИС</a></div></div><div class="mp r"><iframe src="https://yandex.ru/map-widget/v1/?text=%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%8C%2C+%D1%83%D0%BB.+%D0%9E%D0%BD%D0%B5%D0%B6%D1%81%D0%BA%D0%B0%D1%8F%2C+2%D0%B0&amp;z=16" loading="lazy" title="Карта: ул. Онежская, 2а"></iframe></div></div></section>
+<footer><span>© VetСовет · ветеринарная клиника</span><span>ул. Онежская, 2а, Казань</span></footer>
+</div>
+<script>const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll('.r').forEach(el=>io.observe(el));
+function kznNow(){const d=new Date();return (d.getUTCHours()*60+d.getUTCMinutes()+180)%1440}
+function isOpen(a,b){const m=kznNow();return m>=a&&m<b}
+let lp=0;addEventListener('scroll',()=>{const n=Date.now();if(n-lp<420)return;lp=n;const p=document.createElement('span');p.className='paw';p.textContent='🐾';
+p.style.left=(8+Math.random()*84)+'vw';p.style.top=(scrollY+innerHeight*(.3+Math.random()*.5))+'px';p.style.transform='rotate('+(Math.random()*60-30)+'deg)';document.body.appendChild(p);setTimeout(()=>p.remove(),2700)},{passive:true});</script>
+</body></html>
