@@ -1,0 +1,121 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Май — Бистро · кофейня в Казани</title>
+<meta name="description" content="Бистро с завтраками, вином и выпечкой собственной кондитерской.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:ital,wght@0,400;0,600;1,400;1,600&family=Caveat:wght@500;700&family=Manrope:wght@400;600;700&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}
+.r{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .9s cubic-bezier(.2,.7,.2,1) var(--d,0s)}.r.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.r{opacity:1;transform:none}}
+
+:root{--paper:#f4ede0;--ink:#2a241c;--mut:#857a69;--ol:#6f7d4f;--tc:#c46a3c;--line:#d9ceb9}
+body{background:var(--paper);color:var(--ink);font:17px/1.65 Manrope,sans-serif;background-image:radial-gradient(#e6dbc6 1px,transparent 1px);background-size:22px 22px}
+.top{display:flex;justify-content:center;gap:10px 28px;flex-wrap:wrap;padding:14px 16px;font-size:12px;letter-spacing:.18em;text-transform:uppercase;color:var(--mut);border-bottom:1px solid var(--line)}
+.top a:hover{color:var(--tc)}
+.hero{min-height:90vh;display:grid;place-items:center;text-align:center;padding:50px 16px 70px;position:relative}
+.ring{position:relative;width:min(540px,86vw);aspect-ratio:1;display:grid;place-items:center}
+.ring svg{position:absolute;inset:0;width:100%;height:100%;animation:rot 50s linear infinite}
+@keyframes rot{to{transform:rotate(360deg)}}
+.ring text{font:600 14px Manrope;letter-spacing:.3em;fill:var(--ol);text-transform:uppercase}
+.word{font:italic 600 clamp(130px,25vw,240px)/.8 'Cormorant Garamond',serif;position:relative}
+.word::after{content:"";position:absolute;left:6%;right:6%;bottom:2px;height:14px;background:var(--tc);opacity:.22;border-radius:9px;z-index:-1}
+.sub{margin-top:26px;font:italic 400 clamp(22px,3vw,30px)/1.3 'Cormorant Garamond',serif;color:var(--mut)}
+.acts{display:flex;gap:28px;justify-content:center;margin-top:30px;flex-wrap:wrap}
+.acts a{font-weight:700;border-bottom:1.5px solid var(--ink);padding-bottom:4px;letter-spacing:.06em;font-size:15px;transition:.25s}
+.acts a.main{color:var(--tc);border-color:var(--tc)}.acts a:hover{letter-spacing:.12em}
+.stamp{position:absolute;right:7%;top:12%;width:156px;height:156px;border:2px dashed var(--tc);border-radius:50%;display:grid;place-items:center;text-align:center;color:var(--tc);font:700 12px/1.3 Manrope;letter-spacing:.1em;text-transform:uppercase;transform:rotate(12deg);padding:20px;animation:wob 6s ease-in-out infinite}
+@keyframes wob{50%{transform:rotate(4deg) scale(1.04)}}
+.wrap{width:min(1040px,100% - 32px);margin:0 auto}
+.sect{padding:90px 0}
+.orn{text-align:center;color:var(--tc);font-size:22px;letter-spacing:.7em;margin-bottom:10px}
+h2{font:600 clamp(46px,6vw,78px)/1 'Cormorant Garamond',serif;text-align:center;margin-bottom:18px}
+h2 i{color:var(--ol)}
+.lead{max-width:700px;margin:0 auto;text-align:center;font:400 clamp(21px,2.3vw,27px)/1.5 'Cormorant Garamond',serif}
+.menu{background:#fffaf0;border:1px solid var(--line);box-shadow:0 30px 60px -30px rgba(60,40,10,.35);padding:clamp(34px,6vw,76px) clamp(22px,6vw,76px);position:relative;margin-top:50px}
+.menu::before{content:"";position:absolute;inset:12px;border:1px solid var(--line);pointer-events:none}
+.menu .mt{text-align:center;font:italic 600 26px 'Cormorant Garamond',serif;color:var(--mut);margin-bottom:40px;letter-spacing:.1em}
+.cols{columns:2 300px;column-gap:70px}
+.cat{break-inside:avoid;text-align:center;margin-bottom:44px}
+.cat h3{font:italic 600 34px 'Cormorant Garamond',serif;color:var(--ol)}
+.cat h3::after{content:"❦";display:block;font-size:15px;color:var(--tc);font-style:normal;margin:2px 0 8px}
+.cat li{list-style:none;font:400 21px/1.55 'Cormorant Garamond',serif}
+.beans{display:grid;grid-template-columns:repeat(4,1fr);gap:18px;margin-top:46px}
+.bean{aspect-ratio:1;border-radius:50%;border:1.5px solid var(--ink);display:grid;place-items:center;text-align:center;font:italic 600 clamp(22px,2.6vw,32px)/1.1 'Cormorant Garamond',serif;transition:background .4s,color .4s,transform .4s;cursor:default}
+.bean small{display:block;font:700 10px Manrope;letter-spacing:.22em;text-transform:uppercase;color:var(--mut);margin-top:8px;font-style:normal}
+.bean:hover{background:var(--ink);color:var(--paper);transform:rotate(-8deg)}
+.methods{text-align:center;margin-top:30px;color:var(--mut);letter-spacing:.22em;text-transform:uppercase;font-size:13px;font-weight:700}
+.score{text-align:center;font:italic 400 clamp(28px,3.6vw,44px)/1.3 'Cormorant Garamond',serif;max-width:860px;margin:0 auto}
+.score b{font-style:normal;color:var(--tc);font-weight:600}
+.small{font-size:13px;color:var(--mut);text-align:center;margin-top:14px}
+.notes{display:grid;grid-template-columns:repeat(auto-fit,minmax(250px,1fr));gap:34px 28px;margin-top:54px}
+.note{background:#fffdf6;padding:36px 26px 22px;box-shadow:0 14px 30px -16px rgba(60,40,10,.4);position:relative;transform:rotate(var(--rt));transition:transform .35s}
+.note:hover{transform:rotate(0) scale(1.04)}
+.note::before{content:"";position:absolute;top:-12px;left:50%;width:96px;height:26px;margin-left:-48px;background:rgba(196,106,60,.28);transform:rotate(-3deg)}
+.note p{font:500 27px/1.2 Caveat,cursive}
+.note span{display:block;margin-top:14px;color:var(--mut);font-size:13px}
+.thanks{margin-top:56px;text-align:center;font:500 32px/1.3 Caveat,cursive;color:var(--ol)}
+.tip{margin-top:30px;border-block:1px solid var(--line);padding:24px 0;text-align:center;font:italic 400 24px 'Cormorant Garamond',serif}
+.foot{display:grid;grid-template-columns:1fr 1fr;gap:44px;align-items:center}
+.foot .ph{font:600 clamp(36px,4.6vw,56px) 'Cormorant Garamond',serif;display:block;margin:6px 0 16px}
+.foot p{color:var(--mut)}.foot p b{color:var(--ink)}
+.chips{display:flex;flex-wrap:wrap;gap:10px;margin-top:22px}
+.chip{border:1px solid var(--ink);padding:8px 16px;border-radius:999px;font-size:14px;font-weight:600;transition:.25s}
+.chip:hover{background:var(--ink);color:var(--paper)}
+.mapf{padding:12px;background:#fffaf0;border:1px solid var(--line);box-shadow:0 24px 50px -30px rgba(60,40,10,.45);transform:rotate(1.5deg)}
+.mapf iframe{width:100%;height:380px;border:0;display:block;filter:sepia(.35) saturate(.85)}
+footer{text-align:center;padding:30px 16px 60px;color:var(--mut);font-size:12px;letter-spacing:.16em;text-transform:uppercase}
+@media(max-width:800px){.stamp{position:static;margin:34px auto 0;transform:rotate(-6deg)}.beans{grid-template-columns:1fr 1fr}.foot{grid-template-columns:1fr}.hero{min-height:auto}.sect{padding:64px 0}}
+</style></head>
+<body>
+<div class="top"><span>ул. Николая Столбова, 1/3</span><span>Ежедневно 08:30–21:00</span><a href="tel:+79375710500">+7 937 571-05-00</a></div>
+<header class="hero">
+ <div class="ring"><svg viewBox="0 0 500 500" aria-hidden="true"><defs><path id="cp" d="M250,250 m-210,0 a210,210 0 1,1 420,0 a210,210 0 1,1 -420,0"/></defs>
+  <text><textPath href="#cp" textLength="1300">Бистро · завтраки с 08:30 · своя кондитерская · вино · Столбова 1/3 · </textPath></text></svg>
+  <div><div class="word">Май</div></div></div>
+ <p class="sub">Бистро с завтраками, вином и выпечкой собственной кондитерской.</p>
+ <div class="acts"><a class="main" href="tel:+79375710500">Забронировать стол</a><a href="#menu">Смотреть меню</a><a href="https://wa.me/79375710500" target="_blank" rel="noopener">Написать нам</a></div>
+ <div class="stamp">Номинант премии 2ГИС 2026</div>
+</header>
+
+<section class="sect" style="padding-top:20px"><div class="wrap">
+ <div class="orn">✦ ✦ ✦</div><p class="lead r">Круассан-куб, бриошь с ростбифом, шакшука и фирменное пирожное «Май». Кофе заваривают пуровером или в аэропрессе на зерне на выбор: Эфиопия, Колумбия, Перу, Панама.</p>
+</div></section>
+
+<section class="sect" id="menu" style="padding-top:10px"><div class="wrap">
+ <h2 class="r">Наше <i>меню</i></h2>
+ <div class="menu r"><div class="mt">— Бистро «Май» —</div><div class="cols"><div class="cat"><h3>Завтраки</h3><ul><li>Шакшука</li><li>Панкейки</li><li>Омлет с креветками</li><li>Рисовая и овсяная каши</li></ul></div><div class="cat"><h3>Своя кондитерская</h3><ul><li>Круассаны</li><li>Круассан-куб</li><li>Заварные пончики</li><li>Крафины</li><li>Торты и фирменное пирожное «Май»</li></ul></div><div class="cat"><h3>Какао</h3><ul><li>Фирменное какао: шотом или с молоком</li></ul></div><div class="cat"><h3>Основное меню</h3><ul><li>Тартар</li><li>Паштет</li><li>Брускетты</li><li>Паста</li><li>Рагу из говядины</li><li>Полба с гребешком</li></ul></div><div class="cat"><h3>Вегетарианское</h3><ul><li>В меню есть вегетарианские блюда</li></ul></div><div class="cat"><h3>Сэндвичи</h3><ul><li>Сэндвичи с ростбифом и с тунцом</li><li>Бриошь с ростбифом</li></ul></div><div class="cat"><h3>Вино и бар</h3><ul><li>Отдельная барная карта и вино</li></ul></div></div></div>
+</div></section>
+
+<section class="sect"><div class="wrap">
+ <div class="orn">☕</div><h2 class="r">Кофе <i>на ваш выбор</i></h2>
+ <p class="lead r">Пуровер или аэропресс на зерне на выбор: Эфиопия, Колумбия, Перу, Панама. Эспрессо-тоник.</p>
+ <div class="beans"><div class="bean r" style="--d:0.0s">Эфиопия<small>зерно</small></div><div class="bean r" style="--d:0.1s">Колумбия<small>зерно</small></div><div class="bean r" style="--d:0.2s">Перу<small>зерно</small></div><div class="bean r" style="--d:0.30000000000000004s">Панама<small>зерно</small></div></div>
+ <div class="methods">Пуровер · Аэропресс · Эспрессо-тоник</div>
+</div></section>
+
+<section class="sect"><div class="wrap">
+ <p class="score r">Гости ставят нам <b>4,9</b> из 5: это <b>478</b> оценок в 2ГИС. А ещё мы <b>номинант премии 2ГИС 2026</b>.</p>
+ <p class="small">Средний чек 1400 ₽ без напитков (по данным Restoclub).</p>
+ <div class="notes"><figure class="note r" style="--rt:-2.5deg;--d:0.0s"><p>Это абсолютно прекрасное место с шикарным кофе и девушками бариста</p><span>Ольга · отзыв в 2ГИС</span></figure><figure class="note r" style="--rt:1.8deg;--d:0.08s"><p>Очень вкусные блюда! Круассаны — отвал всего)))</p><span>Анна · отзыв в 2ГИС</span></figure><figure class="note r" style="--rt:-1deg;--d:0.16s"><p>Замечательное место! Уютно, очень вкусно, прекрасный персонал.</p><span>Маша · отзыв в 2ГИС</span></figure><figure class="note r" style="--rt:2.4deg;--d:0.24s"><p>Обслуживал нас Эмиль, чуткий, внимательный и вежливый официант.</p><span>Лейла · отзыв в 2ГИС</span></figure><figure class="note r" style="--rt:-1.8deg;--d:0.32s"><p>мне очень нравилось это заведение, все вкусно, чисто, красиво.</p><span>Дина · отзыв в 2ГИС</span></figure></div>
+ <p class="thanks r">Гости благодарят по именам: Эмиль, Юля, Самира ♥</p>
+ <p class="tip r">Столики на завтрак разбирают с утра, поэтому лучше забронировать заранее.</p>
+</div></section>
+
+<section class="sect" id="contacts"><div class="wrap foot">
+ <div class="r"><div class="orn" style="text-align:left">✦</div>
+  <h2 style="text-align:left">Ждём <i>к завтраку</i></h2>
+  <a class="ph" href="tel:+79375710500">+7 937 571-05-00</a>
+  <p><b>ул. Николая Столбова, 1/3</b><br>ЖК «Винсент», 1 этаж, Вахитовский район</p>
+  <p style="margin-top:8px"><b>Ежедневно 08:30–21:00</b><br>В праздничные дни уточняйте время по телефону</p>
+  <div class="chips"><a class="chip" href="https://wa.me/79375710500" target="_blank" rel="noopener">WhatsApp</a><a class="chip" href="https://t.me/+79375710500" target="_blank" rel="noopener">Telegram</a><a class="chip" href="https://2gis.ru/kazan/firm/70000001055387807" target="_blank" rel="noopener">2ГИС</a></div></div>
+ <div class="mapf r"><iframe src="https://yandex.ru/map-widget/v1/?text=%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%8C%2C+%D1%83%D0%BB.+%D0%9D%D0%B8%D0%BA%D0%BE%D0%BB%D0%B0%D1%8F+%D0%A1%D1%82%D0%BE%D0%BB%D0%B1%D0%BE%D0%B2%D0%B0%2C+1%2F3&amp;z=16" loading="lazy" title="Карта: ул. Николая Столбова, 1/3"></iframe></div>
+</div></section>
+<footer>Бистро «Май» · Казань · ул. Николая Столбова, 1/3, ЖК «Винсент», 1 этаж</footer>
+<script>const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll('.r').forEach(el=>io.observe(el));
+function kznNow(){const d=new Date();return (d.getUTCHours()*60+d.getUTCMinutes()+180)%1440}
+function isOpen(a,b){const m=kznNow();return m>=a&&m<b}
+</script>
+</body></html>
