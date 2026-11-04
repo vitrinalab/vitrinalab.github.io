@@ -1,0 +1,112 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Запаска-сервис — Шиномонтажная мастерская в Казани</title>
+<meta name="description" content="Впервые у нас? Скидка 10% на шиномонтаж.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Montserrat+Alternates:wght@600;800&family=Manrope:wght@400;600;800&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}
+.r{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .9s cubic-bezier(.2,.7,.2,1) var(--d,0s)}.r.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.r{opacity:1;transform:none}}
+
+:root{--nv:#0a1a3a;--nv2:#10264f;--lime:#c6f432;--sky:#4aa3ff;--w:#eef3ff;--mut:#9fb0d4;--line:#1f3766}
+body{background:var(--nv);color:var(--w);font:16px/1.6 Manrope,sans-serif}
+h1,h2,h3{font-family:'Montserrat Alternates',sans-serif;font-weight:800;line-height:1.02;letter-spacing:-.02em}
+.wrap{width:min(1180px,100% - 32px);margin:0 auto}
+nav{display:flex;justify-content:space-between;align-items:center;padding:20px 0}
+.lg{font:800 20px 'Montserrat Alternates';display:flex;gap:10px;align-items:center}
+.lg i{width:30px;height:30px;border-radius:50%;background:conic-gradient(var(--lime) 0 25%,var(--sky) 0 50%,var(--lime) 0 75%,var(--sky) 0);animation:sp 6s linear infinite}
+@keyframes sp{to{transform:rotate(360deg)}}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--lime);color:var(--nv);padding:15px 26px;border-radius:16px;font-weight:800;transition:transform .2s,box-shadow .2s;box-shadow:0 8px 0 #8db11c}
+.btn:hover{transform:translateY(3px);box-shadow:0 5px 0 #8db11c}
+.btn.s{background:transparent;color:var(--w);box-shadow:inset 0 0 0 2px var(--line)}
+.hero{display:grid;grid-template-columns:1.1fr .9fr;gap:40px;align-items:center;padding:50px 0 80px}
+.ey{display:inline-block;background:var(--nv2);border:1px solid var(--line);padding:7px 14px;border-radius:999px;font-size:13px;font-weight:600;color:var(--lime);margin-bottom:24px}
+.hero h1{font-size:clamp(46px,6.6vw,92px)}.hero h1 em{font-style:normal;color:var(--lime)}
+.hero p{color:var(--mut);font-size:19px;margin:24px 0 30px;max-width:500px}
+.bb{display:flex;gap:14px;flex-wrap:wrap}
+.cp{position:relative;background:var(--lime);color:var(--nv);border-radius:28px;padding:40px 36px;display:grid;grid-template-columns:1fr auto;gap:20px;align-items:center;transform:rotate(4deg);transition:transform .5s;box-shadow:0 40px 80px -40px rgba(198,244,50,.6)}
+.cp:hover{transform:rotate(0) scale(1.02)}
+.cp::before,.cp::after{content:"";position:absolute;width:44px;height:44px;border-radius:50%;background:var(--nv);right:120px;top:-22px}
+.cp::after{top:auto;bottom:-22px}
+.cp .l small{font-weight:800;letter-spacing:.14em;text-transform:uppercase;font-size:12px}
+.cp .l b{display:block;font:800 clamp(80px,10vw,130px)/.9 'Montserrat Alternates';margin:8px 0}
+.cp .l p{font-weight:800;font-size:18px}
+.cp .rt{border-left:3px dashed var(--nv);padding-left:24px;writing-mode:vertical-rl;transform:rotate(180deg);font:800 14px 'Montserrat Alternates';letter-spacing:.2em;text-transform:uppercase;height:200px;text-align:center}
+.cpn{text-align:center;margin-top:20px;color:var(--mut);font-size:14px}
+.tl{background:var(--nv2);border:1px solid var(--line);border-radius:28px;padding:clamp(24px,4vw,44px)}
+.tlh{display:flex;justify-content:space-between;align-items:end;gap:20px;flex-wrap:wrap;margin-bottom:30px}
+.tlh h2{font-size:clamp(30px,4vw,52px)}
+.stt{display:inline-flex;align-items:center;gap:10px;font-weight:800;font-size:18px}.stt i{width:12px;height:12px;border-radius:50%;background:var(--lime);box-shadow:0 0 14px var(--lime)}.stt.cl i{background:#ff5d5d;box-shadow:0 0 14px #ff5d5d}
+.bar{position:relative;height:64px;border-radius:16px;background:repeating-linear-gradient(90deg,#16305e 0 calc(100%/24 - 2px),transparent 0 calc(100%/24))}
+.op{position:absolute;top:0;bottom:0;border-radius:14px;background:linear-gradient(90deg,var(--lime),#9be01a);display:flex;align-items:center;justify-content:center;color:var(--nv);font:800 16px 'Montserrat Alternates'}
+.nw{position:absolute;top:-14px;bottom:-14px;width:3px;background:#fff;border-radius:3px;transition:left 1s}
+.nw::before{content:"сейчас";position:absolute;top:-24px;left:50%;transform:translateX(-50%);font-size:12px;font-weight:800;white-space:nowrap}
+.ticks{display:flex;justify-content:space-between;margin-top:10px;color:var(--mut);font-size:13px;font-weight:600}
+.sec{padding:100px 0 0}
+.sec>h2,.hd h2{font-size:clamp(36px,5vw,66px);margin-bottom:40px}.sec h2 em{font-style:normal;color:var(--lime)}
+.svc{display:grid;grid-template-columns:repeat(5,1fr);gap:12px}
+.sv{background:var(--nv2);border:1px solid var(--line);border-radius:24px;padding:26px 22px;transition:background .3s,transform .3s}
+.sv:hover{background:var(--sky);transform:translateY(-8px)}
+.sv .ic{width:54px;height:54px;border-radius:50%;border:6px solid var(--lime);margin-bottom:34px;position:relative}
+.sv .ic::after{content:"";position:absolute;inset:8px;border-radius:50%;background:var(--lime)}
+.sv h3{font-size:20px;margin-bottom:8px}.sv p{color:var(--mut);font-size:15px}.sv:hover p{color:#fff}
+.why{display:grid;grid-template-columns:repeat(3,1fr);gap:12px}
+.wy{border-radius:24px;padding:30px;background:linear-gradient(160deg,var(--nv2),#0d2148);border:1px solid var(--line)}
+.wy b{font:800 54px/1 'Montserrat Alternates';color:var(--sky);display:block;margin-bottom:20px}
+.wy h3{font-size:22px;margin-bottom:8px}.wy p{color:var(--mut)}
+.master{display:flex;align-items:center;gap:24px;background:var(--lime);color:var(--nv);border-radius:28px;padding:28px 34px;margin-bottom:24px}
+.master i{width:80px;height:80px;border-radius:50%;background:var(--nv);color:var(--lime);display:grid;place-items:center;font:800 34px 'Montserrat Alternates';font-style:normal;flex:none}
+.master b{font:800 28px 'Montserrat Alternates';display:block}
+.mq{overflow:hidden;padding:8px 0;mask-image:linear-gradient(90deg,transparent,#000 8%,#000 92%,transparent)}
+.mt{display:flex;gap:14px;width:max-content;animation:mq 40s linear infinite}.mq.rv .mt{animation-direction:reverse}
+@keyframes mq{to{transform:translateX(-50%)}}
+.mq:hover .mt{animation-play-state:paused}
+.rc{width:380px;background:var(--nv2);border:1px solid var(--line);border-radius:22px;padding:24px}
+.rc .st{color:var(--lime);letter-spacing:3px;margin-bottom:10px}.rc p{font-size:17px}.rc span{display:block;margin-top:12px;color:var(--mut);font-size:14px}
+.ct{display:grid;grid-template-columns:1fr 1.2fr;gap:14px;margin-bottom:60px}
+.cb{background:var(--nv2);border:1px solid var(--line);border-radius:28px;padding:clamp(26px,4vw,46px)}
+.cb .ph{display:block;font:800 clamp(30px,3.6vw,46px) 'Montserrat Alternates';color:var(--lime);margin:10px 0 24px}
+.cb p{margin-bottom:14px}.cb small{display:block;color:var(--mut)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:20px}.chip{background:#16305e;padding:9px 16px;border-radius:12px;font-weight:600;font-size:14px}.chip:hover{background:var(--sky)}
+.mp{border-radius:28px;overflow:hidden;min-height:400px}.mp iframe{width:100%;height:100%;min-height:400px;border:0;display:block}
+footer{padding:0 0 40px;color:var(--mut);font-size:14px;display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:960px){.hero,.ct{grid-template-columns:1fr}.svc{grid-template-columns:1fr 1fr}.why{grid-template-columns:1fr}.cp{transform:rotate(2deg)}.rc{width:300px}}
+.hero>*{min-width:0}
+.btn{white-space:nowrap}
+@media(max-width:520px){nav .btn{padding:11px 14px;font-size:14px}.lg{font-size:16px}.hero h1{font-size:clamp(32px,9.6vw,46px)}.svc{grid-template-columns:1fr}.cp{grid-template-columns:1fr}.cp .rt{writing-mode:horizontal-tb;transform:none;height:auto;border-left:0;border-top:3px dashed var(--nv);padding:16px 0 0}.cp::before,.cp::after{display:none}}
+</style></head>
+<body>
+<div class="wrap">
+<nav><a class="lg" href="#top"><i></i>Запаска-сервис</a><a class="btn" href="tel:+79625752211">+7 962 575-22-11</a></nav>
+<header class="hero" id="top"><div>
+ <span class="ey">● Шиномонтаж · с 7 утра до 10 вечера</span>
+ <h1>Переобуем <em>быстро.</em><br>На новом оборудовании.</h1>
+ <p>Шиномонтаж, балансировка, мойка колёс и заправка кондиционера на новом оборудовании. Работаем с 7 до 22 каждый день, так что заехать можно до работы и после неё.</p>
+ <div class="bb"><a class="btn" href="tel:+79625752211">Позвонить и приехать</a><a class="btn s" href="#ct">Где мы</a></div>
+</div><div class="r"><div class="cp"><div class="l"><small>Впервые у нас?</small><b>−10%</b><p>на шиномонтаж</p></div><div class="rt">Новым клиентам</div></div>
+ <div class="cpn">Скидка на первый шиномонтаж. Условия уточняйте по телефону</div></div></header>
+
+<div class="tl r"><div class="tlh"><h2>Работаем с 07:00<br>до 22:00</h2><div class="stt" id="stt"><i></i><span>Каждый день</span></div></div>
+ <div class="bar"><div class="op" style="left:29.17%;width:62.50%">открыто</div><div class="nw" id="nw"></div></div>
+ <div class="ticks"><span>00</span><span>06</span><span>12</span><span>18</span><span>24</span></div></div>
+
+<section class="sec"><h2 class="r">Что <em>делаем</em></h2><div class="svc"><div class="sv r" style="--d:0.0s"><div class="ic"></div><h3>Шиномонтаж</h3><p>Демонтаж и монтаж шин.</p></div><div class="sv r" style="--d:0.07s"><div class="ic"></div><h3>Сезонная перекидка</h3><p>Зима ↔ лето.</p></div><div class="sv r" style="--d:0.14s"><div class="ic"></div><h3>Балансировка</h3><p>На новом оборудовании.</p></div><div class="sv r" style="--d:0.21000000000000002s"><div class="ic"></div><h3>Мойка колёс</h3><p>Перед монтажом или хранением.</p></div><div class="sv r" style="--d:0.28s"><div class="ic"></div><h3>Заправка кондиционера</h3><p>Подготовим машину к сезону.</p></div></div></section>
+<section class="sec"><h2 class="r">Почему <em>к нам</em></h2><div class="why"><div class="wy r"><b>01</b><h3>Новое оборудование</h3><p>Это клиенты отмечают в отзывах чаще всего.</p></div><div class="wy r"><b>02</b><h3>Цены ниже соседей</h3><p>«Ниже, чем в ближайших сервисах с похожей репутацией».</p></div><div class="wy r"><b>03</b><h3>Без очереди</h3><p>Принимают быстро и аккуратно обращаются с дисками.</p></div></div></section>
+<section class="sec"><h2 class="r">Говорят <em>клиенты</em></h2>
+ <div class="master r"><i>Р</i><div><b>Ришат</b>мастер шиномонтажа · его благодарят в отзывах</div></div>
+ <div class="mq"><div class="mt"><div class="rc"><div class="st">★★★★★</div><p>«Шиномонтаж-ка огонь, новое оборудование мастер Решат знает свое дело»</p><span>Кирилл · 2ГИС</span></div><div class="rc"><div class="st">★★★★★</div><p>«Цены приятно удивили: ниже, чем в ближайших сервисах с похожей репутацией.»</p><span>Руслан · 2ГИС</span></div><div class="rc"><div class="st">★★★★★</div><p>«Менял зимнюю резину на летнюю. Качество высокое, цены адекватные.»</p><span>Айрат · 2ГИС</span></div><div class="rc"><div class="st">★★★★★</div><p>«Отличный шиномонтаж, быстро приняли без очереди, поменяли, всем советую»</p><span>Даниил · 2ГИС</span></div><div class="rc"><div class="st">★★★★★</div><p>«Адекватный и приветливый персонал, новое оборудование.»</p><span>Ильдар · 2ГИС</span></div><div class="rc"><div class="st">★★★★★</div><p>«Шиномонтаж-ка огонь, новое оборудование мастер Решат знает свое дело»</p><span>Кирилл · 2ГИС</span></div><div class="rc"><div class="st">★★★★★</div><p>«Цены приятно удивили: ниже, чем в ближайших сервисах с похожей репутацией.»</p><span>Руслан · 2ГИС</span></div><div class="rc"><div class="st">★★★★★</div><p>«Менял зимнюю резину на летнюю. Качество высокое, цены адекватные.»</p><span>Айрат · 2ГИС</span></div><div class="rc"><div class="st">★★★★★</div><p>«Отличный шиномонтаж, быстро приняли без очереди, поменяли, всем советую»</p><span>Даниил · 2ГИС</span></div><div class="rc"><div class="st">★★★★★</div><p>«Адекватный и приветливый персонал, новое оборудование.»</p><span>Ильдар · 2ГИС</span></div></div></div><div class="mq rv"><div class="mt"><div class="rc"><div class="st">★★★★★</div><p>«Отличный шиномонтаж, быстро приняли без очереди, поменяли, всем советую»</p><span>Даниил · 2ГИС</span></div><div class="rc"><div class="st">★★★★★</div><p>«Адекватный и приветливый персонал, новое оборудование.»</p><span>Ильдар · 2ГИС</span></div><div class="rc"><div class="st">★★★★★</div><p>«Шиномонтаж-ка огонь, новое оборудование мастер Решат знает свое дело»</p><span>Кирилл · 2ГИС</span></div><div class="rc"><div class="st">★★★★★</div><p>«Цены приятно удивили: ниже, чем в ближайших сервисах с похожей репутацией.»</p><span>Руслан · 2ГИС</span></div><div class="rc"><div class="st">★★★★★</div><p>«Менял зимнюю резину на летнюю. Качество высокое, цены адекватные.»</p><span>Айрат · 2ГИС</span></div><div class="rc"><div class="st">★★★★★</div><p>«Отличный шиномонтаж, быстро приняли без очереди, поменяли, всем советую»</p><span>Даниил · 2ГИС</span></div><div class="rc"><div class="st">★★★★★</div><p>«Адекватный и приветливый персонал, новое оборудование.»</p><span>Ильдар · 2ГИС</span></div><div class="rc"><div class="st">★★★★★</div><p>«Шиномонтаж-ка огонь, новое оборудование мастер Решат знает свое дело»</p><span>Кирилл · 2ГИС</span></div><div class="rc"><div class="st">★★★★★</div><p>«Цены приятно удивили: ниже, чем в ближайших сервисах с похожей репутацией.»</p><span>Руслан · 2ГИС</span></div><div class="rc"><div class="st">★★★★★</div><p>«Менял зимнюю резину на летнюю. Качество высокое, цены адекватные.»</p><span>Айрат · 2ГИС</span></div></div></div></section>
+
+<section class="sec" id="ct"><h2 class="r">Приезжай</h2><div class="ct"><div class="cb r"><small>Телефон</small><a class="ph" href="tel:+79625752211">+7 962 575-22-11</a>
+ <p>ул. Академика Арбузова, 5 к3<small>1 этаж, Советский район, Казань · у нас 2 точки в Казани</small></p><p>Ежедневно 07:00–22:00<small>В праздничные дни уточняйте время по телефону</small></p>
+ <div class="chips"><a class="chip" href="https://max.ru/join/RpE-JTTqW1AqpBtLRZyKDsMVm8FvomCmytyAi2ljJEQ" target="_blank" rel="noopener">Max</a><a class="chip" href="mailto:rishatahmetgareev@gmail.com" target="_blank" rel="noopener">Почта</a><a class="chip" href="https://2gis.ru/kazan/firm/70000001112463710" target="_blank" rel="noopener">2ГИС</a></div></div><div class="mp r"><iframe src="https://yandex.ru/map-widget/v1/?text=%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%8C%2C+%D1%83%D0%BB.+%D0%90%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D0%B8%D0%BA%D0%B0+%D0%90%D1%80%D0%B1%D1%83%D0%B7%D0%BE%D0%B2%D0%B0%2C+5+%D0%BA3&amp;z=16" loading="lazy" title="Карта: ул. Академика Арбузова, 5 к3"></iframe></div></div></section>
+<footer><span>© Запаска-сервис</span><span>ул. Академика Арбузова, 5 к3, Казань</span></footer>
+</div>
+<script>const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll('.r').forEach(el=>io.observe(el));
+function kznNow(){const d=new Date();return (d.getUTCHours()*60+d.getUTCMinutes()+180)%1440}
+function isOpen(a,b){const m=kznNow();return m>=a&&m<b}
+const m=kznNow(),W=document.getElementById('nw'),T=document.getElementById('stt');W.style.left=(m/1440*100)+'%';
+if(isOpen(420,1320)){T.lastChild.textContent='Сейчас открыто'}else{T.classList.add('cl');T.lastChild.textContent='Сейчас закрыто'}</script>
+</body></html>
