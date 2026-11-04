@@ -1,0 +1,119 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>СТО Машин — Автосервис · правка дисков в Казани</title>
+<meta name="description" content="Прокатка и правка литых и штампованных дисков, аргон, шиномонтаж и ремонт.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Exo+2:wght@500;700;800&family=JetBrains+Mono:wght@400;600&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}
+.r{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .9s cubic-bezier(.2,.7,.2,1) var(--d,0s)}.r.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.r{opacity:1;transform:none}}
+
+:root{--bg:#0e1114;--s:#151a1f;--ink:#e9eef2;--mut:#8a96a2;--or:#ff6b1a;--bl:#2d6cdf;--line:#24303a}
+body{background:var(--bg);color:var(--ink);font:16px/1.6 Inter,sans-serif;background-image:linear-gradient(rgba(45,108,223,.07) 1px,transparent 1px),linear-gradient(90deg,rgba(45,108,223,.07) 1px,transparent 1px);background-size:32px 32px}
+.mono{font-family:'JetBrains Mono',monospace}
+h1,h2,h3{font-family:'Exo 2',sans-serif;line-height:1;letter-spacing:-.01em}
+.wrap{width:min(1200px,100% - 32px);margin:0 auto}
+nav{display:flex;justify-content:space-between;align-items:center;padding:18px 0;border-bottom:1px dashed var(--line)}
+.lg{font:800 22px 'Exo 2';text-transform:uppercase;letter-spacing:.04em}.lg b{color:var(--or)}
+.nv{display:flex;gap:26px;font:400 13px 'JetBrains Mono';color:var(--mut)}.nv a:hover{color:var(--or)}
+.btn{display:inline-flex;align-items:center;gap:10px;background:var(--or);color:#111;padding:14px 22px;font:600 14px 'JetBrains Mono';text-transform:uppercase;letter-spacing:.06em;clip-path:polygon(0 0,calc(100% - 12px) 0,100% 12px,100% 100%,12px 100%,0 calc(100% - 12px));transition:.25s}
+.btn:hover{background:#fff}
+.btn.g{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 1px var(--line)}.btn.g:hover{box-shadow:inset 0 0 0 1px var(--or);color:var(--or)}
+.hero{display:grid;grid-template-columns:1.05fr .95fr;gap:30px;align-items:center;padding:70px 0 50px}
+.tag{font:400 13px 'JetBrains Mono';color:var(--or);margin-bottom:22px}
+.hero h1{font-size:clamp(48px,7vw,98px);font-weight:800;text-transform:uppercase}
+.hero h1 span{color:transparent;-webkit-text-stroke:1.5px var(--ink)}
+.hero p{color:var(--mut);font-size:19px;max-width:520px;margin:24px 0 28px}
+.st{display:inline-flex;align-items:center;gap:10px;font:600 13px 'JetBrains Mono';padding:8px 14px;border:1px solid var(--line);margin-bottom:26px}
+.st i{width:9px;height:9px;border-radius:50%;background:#3ddc84;box-shadow:0 0 0 0 #3ddc84;animation:pg 1.8s infinite}.st.cl i{background:#ff4d4d;animation:none}
+@keyframes pg{70%{box-shadow:0 0 0 10px transparent}}
+.bb{display:flex;gap:12px;flex-wrap:wrap}
+.bp{position:relative}.bp svg{width:100%;height:auto;overflow:visible}
+.draw{stroke-dasharray:1;stroke-dashoffset:1;animation:dr 2.6s .2s ease forwards}
+@keyframes dr{to{stroke-dashoffset:0}}
+.sp{transform-origin:250px 250px;animation:rot 14s linear infinite}@keyframes rot{to{transform:rotate(360deg)}}
+.lab{font:600 12px 'JetBrains Mono';fill:var(--or);letter-spacing:.08em}
+.strip{display:grid;grid-template-columns:repeat(4,1fr);border:1px solid var(--line);background:var(--s)}
+.strip div{padding:22px 24px;border-right:1px solid var(--line)}.strip div:last-child{border:0}
+.strip small{display:block;font:400 11px 'JetBrains Mono';color:var(--mut);letter-spacing:.14em}
+.strip b{font:800 clamp(26px,3vw,40px) 'Exo 2'}
+.sec{padding:100px 0 0}
+.sh{font:400 13px 'JetBrains Mono';color:var(--or);margin-bottom:14px}
+.sec h2{font-size:clamp(38px,5vw,68px);font-weight:800;text-transform:uppercase;margin-bottom:40px}
+.wo{border:1px solid var(--line);background:var(--s)}
+.woh{display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px;padding:18px 24px;border-bottom:1px solid var(--line);font:600 13px 'JetBrains Mono';color:var(--mut)}
+.woh b{color:var(--ink)}
+.tr{display:grid;grid-template-columns:70px 1fr 1.4fr 60px;gap:20px;align-items:center;padding:20px 24px;border-bottom:1px dashed var(--line);position:relative;transition:background .25s}
+.tr:last-child{border-bottom:0}
+.tr::before{content:"";position:absolute;left:0;top:0;bottom:0;width:3px;background:var(--or);transform:scaleY(0);transition:transform .25s}
+.tr:hover{background:#1a2128}.tr:hover::before{transform:scaleY(1)}
+.tr .n{font:600 13px 'JetBrains Mono';color:var(--or)}.tr h3{font-size:22px;font-weight:700}.tr p{color:var(--mut);font-size:15px}
+.tr .ck{font:600 13px 'JetBrains Mono';color:#3ddc84;text-align:right}
+.cl2{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.term{background:#0a0d10;border:1px solid var(--line);padding:28px;font:400 15px/1.9 'JetBrains Mono'}
+.term .pr{color:var(--mut)}.term .ok{color:#3ddc84}.term b{color:var(--ink);font-weight:600}
+.crew{display:grid;gap:10px}
+.cr{display:flex;align-items:center;gap:18px;padding:16px 20px;border:1px solid var(--line);background:var(--s);transition:border-color .25s}
+.cr:hover{border-color:var(--or)}
+.cr i{width:46px;height:46px;display:grid;place-items:center;background:var(--or);color:#111;font:800 20px 'Exo 2';font-style:normal;clip-path:polygon(25% 0,75% 0,100% 50%,75% 100%,25% 100%,0 50%)}
+.cr b{font:700 19px 'Exo 2';display:block}.cr span{font:400 12px 'JetBrains Mono';color:var(--mut)}
+.revs{display:grid;grid-template-columns:repeat(auto-fit,minmax(260px,1fr));gap:14px}
+.rv{border:1px solid var(--line);background:var(--s);padding:24px}
+.rv .h{display:flex;justify-content:space-between;font:600 12px 'JetBrains Mono';color:var(--mut);padding-bottom:14px;margin-bottom:14px;border-bottom:1px dashed var(--line)}
+.rv .h span{color:#f5b301}.rv p{font-size:17px}.rv small{display:block;margin-top:14px;font:400 12px 'JetBrains Mono';color:var(--or)}
+.ct{display:grid;grid-template-columns:1fr 1.2fr;border:1px solid var(--line);background:var(--s);margin-bottom:60px}
+.ci{padding:clamp(24px,4vw,48px)}
+.ci .ph{font:800 clamp(30px,3.6vw,48px) 'Exo 2';display:block;margin:6px 0 24px;color:var(--or)}
+.kv{display:grid;grid-template-columns:110px 1fr;gap:6px 16px;font-size:15px;margin-bottom:22px}.kv dt{font:400 12px/2 'JetBrains Mono';color:var(--mut)}
+.chips{display:flex;flex-wrap:wrap;gap:8px}.chip{font:600 12px 'JetBrains Mono';padding:8px 14px;border:1px solid var(--line);text-transform:uppercase}.chip:hover{border-color:var(--or);color:var(--or)}
+.mp iframe{width:100%;height:100%;min-height:420px;border:0;display:block;filter:invert(.9) hue-rotate(180deg) saturate(.5)}
+footer{padding:0 0 40px;font:400 12px 'JetBrains Mono';color:var(--mut);display:flex;justify-content:space-between;flex-wrap:wrap;gap:10px}
+@media(max-width:900px){.nv{display:none}.hero,.cl2,.ct{grid-template-columns:1fr}.strip{grid-template-columns:1fr 1fr}.strip div:nth-child(2){border-right:0}.strip div:nth-child(-n+2){border-bottom:1px solid var(--line)}
+.tr{grid-template-columns:44px 1fr}.tr p{grid-column:2}.tr .ck{display:none}.bp{max-width:420px;margin:0 auto}}
+</style></head>
+<body>
+<div class="wrap">
+<nav><a class="lg" href="#top">СТО <b>Машин</b></a><div class="nv"><a href="#wo">/услуги</a><a href="#why">/почему_мы</a><a href="#rev">/отзывы</a><a href="#ct">/контакты</a></div>
+<a class="btn" href="tel:+79991459016">+7 999 145-90-16</a></nav>
+<header class="hero" id="top"><div>
+ <div class="tag">// АВТОСЕРВИС · ПРАВКА ДИСКОВ · КИРОВСКИЙ РАЙОН</div>
+ <div class="st" id="st"><i></i><span>Ежедневно 09:00–21:00</span></div>
+ <h1>Диски <span>как новые.</span><br>Машина в порядке.</h1>
+ <p>Прокатка и правка литых и штампованных дисков, аргон, шиномонтаж и ремонт.</p>
+ <div class="bb"><a class="btn" href="https://wa.me/79991459016" target="_blank" rel="noopener">Записаться →</a><a class="btn g" href="#wo">Список работ</a></div>
+</div><div class="bp"><svg viewBox="-40 0 580 500" aria-hidden="true">
+<circle class="draw" pathLength="1" cx="250" cy="250" r="200" fill="none" stroke="#e9eef2" stroke-width="2"/>
+<circle cx="250" cy="250" r="170" fill="none" stroke="#8a96a2" stroke-width="1" stroke-dasharray="6 6"/>
+<circle class="draw" pathLength="1" cx="250" cy="250" r="130" fill="none" stroke="#2d6cdf" stroke-width="2"/>
+<g class="sp" stroke="#e9eef2" stroke-width="10" stroke-linecap="round" fill="none">
+ <path d="M250 140v70"/><path d="M355 216l-66 22"/><path d="M315 339l-41-57"/><path d="M185 339l41-57"/><path d="M145 216l66 22"/></g>
+<circle cx="250" cy="250" r="30" fill="#ff6b1a"/><circle cx="250" cy="250" r="10" fill="#0e1114"/>
+<g stroke="#ff6b1a" stroke-width="1.2" fill="none"><path d="M392 108l70-50h60"/><path d="M430 300l60 20h40"/><path d="M110 108l-60-50h-60"/><path d="M90 380l-50 40h-60"/></g>
+<text class="lab" x="466" y="50">ПРОКАТКА</text><text class="lab" x="492" y="312">ПРАВКА</text>
+<text class="lab" x="-30" y="50">АРГОН</text><text class="lab" x="-34" y="412">ШИНОМОНТАЖ</text>
+<path d="M50 470h400" stroke="#8a96a2" stroke-width="1"/><path d="M50 462v16M450 462v16" stroke="#8a96a2"/>
+<text class="lab" x="200" y="494" fill="#8a96a2" style="fill:#8a96a2">ЛИТЫЕ · ШТАМПОВАННЫЕ</text></svg></div></header>
+<div class="strip r"><div><small>РЕЙТИНГ 2ГИС</small><b>5.0 ★</b></div><div><small>ОЦЕНОК</small><b>73</b></div><div><small>ГРАФИК</small><b>09–21</b></div><div><small>ЗАПИСЬ</small><b>день в день</b></div></div>
+
+<section class="sec" id="wo"><div class="sh">// 01 · услуги</div><h2 class="r">Заказ-наряд</h2>
+ <div class="wo"><div class="woh"><span>ЗАКАЗ-НАРЯД <b>№ 001</b></span><span>ИСПОЛНИТЕЛЬ: <b>СТО МАШИН</b></span><span>УЛ. МАРШРУТНАЯ, 12А</span></div><div class="tr r"><span class="n">001</span><h3>Прокатка дисков</h3><p>Литые и штампованные диски.</p><span class="ck">[ ✓ ]</span></div><div class="tr r"><span class="n">002</span><h3>Правка дисков</h3><p>Восстановление геометрии.</p><span class="ck">[ ✓ ]</span></div><div class="tr r"><span class="n">003</span><h3>Аргонная сварка</h3><p>Ремонт трещин дисков аргоном.</p><span class="ck">[ ✓ ]</span></div><div class="tr r"><span class="n">004</span><h3>Шиномонтаж</h3><p>Сезонная смена и балансировка.</p><span class="ck">[ ✓ ]</span></div><div class="tr r"><span class="n">005</span><h3>Развал-схождение</h3><p>Настройка углов установки колёс.</p><span class="ck">[ ✓ ]</span></div><div class="tr r"><span class="n">006</span><h3>ТО и масло</h3><p>Замена масла и расходников.</p><span class="ck">[ ✓ ]</span></div><div class="tr r"><span class="n">007</span><h3>Кондиционер</h3><p>Диагностика и заправка.</p><span class="ck">[ ✓ ]</span></div><div class="tr r"><span class="n">008</span><h3>Ходовая и рулевое</h3><p>Подвеска, рулевая рейка, свечи, замок зажигания, компьютерная диагностика.</p><span class="ck">[ ✓ ]</span></div></div></section>
+
+<section class="sec" id="why"><div class="sh">// 02 · почему мы</div><h2 class="r">Проверено клиентами</h2>
+ <div class="cl2"><div class="term r"><div><span class="pr">$ check --1</span> <span class="ok">[OK]</span> <b>Без «разводов»</b><br><span class="pr">&nbsp;&nbsp;→ Клиенты отмечают честные рекомендации без навязывания.</span></div><div><span class="pr">$ check --2</span> <span class="ok">[OK]</span> <b>Быстро</b><br><span class="pr">&nbsp;&nbsp;→ Можно записаться и приехать в тот же день.</span></div><div><span class="pr">$ check --3</span> <span class="ok">[OK]</span> <b>Объясняют</b><br><span class="pr">&nbsp;&nbsp;→ Показывают, что с машиной, и дают советы.</span></div></div><div class="crew"><div class="sh" style="margin:0 0 4px">// смена · мастера, которых благодарят</div><div class="cr r"><i>И</i><div><b>Илья</b><span>мастер-приёмщик</span></div></div><div class="cr r"><i>А</i><div><b>Андрей</b><span>кузов, развал-схождение</span></div></div><div class="cr r"><i>А</i><div><b>Артём</b><span>мастер</span></div></div><div class="cr r"><i>А</i><div><b>Алексей</b><span>механик</span></div></div></div></div></section>
+
+<section class="sec" id="rev"><div class="sh">// 03 · отзывы · 5.0 ★ · 73 оценки</div><h2 class="r">Что пишут</h2><div class="revs"><figure class="rv r"><div class="h">ОТЗЫВ #01 · 2ГИС<span>★★★★★</span></div><p>«Отличный сервис, заехал, все посмотрели, дали рекомендации, все объяснили»</p><small>— Максим</small></figure><figure class="rv r"><div class="h">ОТЗЫВ #02 · 2ГИС<span>★★★★★</span></div><p>«Отличный сервис,все сделали быстро и качественно»</p><small>— Ян</small></figure><figure class="rv r"><div class="h">ОТЗЫВ #03 · 2ГИС<span>★★★★★</span></div><p>«мастер Илья отлично выполнил свою работу, рекомендую»</p><small>— Ронель</small></figure><figure class="rv r"><div class="h">ОТЗЫВ #04 · 2ГИС<span>★★★★★</span></div><p>«Ребята молодцы, ни каких &quot;разводов&quot;.»</p><small>— Дмитрий</small></figure><figure class="rv r"><div class="h">ОТЗЫВ #05 · 2ГИС<span>★★★★★</span></div><p>«Сразу видно профессионалов своего дела, при этом с высоким уровнем заботы о клиентах.»</p><small>— Дмитрий Т.</small></figure></div></section>
+
+<section class="sec" id="ct"><div class="sh">// 04 · контакты</div><h2 class="r">Приезжайте</h2>
+ <div class="ct"><div class="ci"><a class="ph" href="tel:+79991459016">+7 999 145-90-16</a>
+ <dl class="kv"><dt>АДРЕС</dt><dd>ул. Маршрутная, 12а, БЦ «Are group», 1 этаж</dd><dt>РАЙОН</dt><dd>Кировский район</dd><dt>ГРАФИК</dt><dd>Ежедневно 09:00–21:00</dd></dl>
+ <div class="chips"><a class="chip" href="https://wa.me/79991459016" target="_blank" rel="noopener">WhatsApp</a><a class="chip" href="https://t.me/+79991459016" target="_blank" rel="noopener">Telegram</a><a class="chip" href="https://vk.com/stomashin12" target="_blank" rel="noopener">ВКонтакте</a><a class="chip" href="https://2gis.ru/kazan/firm/70000001102361381" target="_blank" rel="noopener">2ГИС</a></div></div><div class="mp"><iframe src="https://yandex.ru/map-widget/v1/?text=%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%8C%2C+%D1%83%D0%BB.+%D0%9C%D0%B0%D1%80%D1%88%D1%80%D1%83%D1%82%D0%BD%D0%B0%D1%8F%2C+12%D0%B0&amp;z=16" loading="lazy" title="Карта: ул. Маршрутная, 12а"></iframe></div></div></section>
+<footer><span>© СТО Машин · Казань</span><span>ул. Маршрутная, 12а</span></footer>
+</div>
+<script>const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll('.r').forEach(el=>io.observe(el));
+function kznNow(){const d=new Date();return (d.getUTCHours()*60+d.getUTCMinutes()+180)%1440}
+function isOpen(a,b){const m=kznNow();return m>=a&&m<b}
+const S=document.getElementById('st');if(isOpen(540,1260)){S.lastChild.textContent='Сейчас открыто · до 21:00'}else{S.classList.add('cl');S.lastChild.textContent='Сейчас закрыто · откроемся в 09:00'}</script>
+</body></html>
