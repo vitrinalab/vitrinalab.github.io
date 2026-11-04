@@ -1,0 +1,124 @@
+<!doctype html>
+<html lang="ru"><head><meta charset="utf-8"><meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Chair — Барбершоп в Казани</title>
+<meta name="description" content="Мужские стрижки, борода и бритьё. Парковка и PlayStation, пока ждёте.">
+<meta name="robots" content="noindex,nofollow">
+<link rel="preconnect" href="https://fonts.googleapis.com"><link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Oswald:wght@400;600;700&family=Playfair+Display:ital,wght@1,500&family=Inter:wght@400;600&display=swap" rel="stylesheet">
+<style>*{box-sizing:border-box;margin:0;padding:0}html{scroll-behavior:smooth}body{overflow-x:hidden;-webkit-font-smoothing:antialiased}
+a{color:inherit;text-decoration:none}button{font:inherit;color:inherit}
+.r{opacity:0;transform:translateY(26px);transition:opacity .9s cubic-bezier(.2,.7,.2,1) var(--d,0s),transform .9s cubic-bezier(.2,.7,.2,1) var(--d,0s)}.r.in{opacity:1;transform:none}
+@media (prefers-reduced-motion:reduce){*{animation:none!important;transition:none!important}.r{opacity:1;transform:none}}
+
+:root{--bg:#0b0b0a;--s:#151412;--bone:#efe7d6;--mut:#9b927f;--gold:#c8a25a;--ox:#7d2a25;--line:#2a2722}
+body{background:var(--bg);color:var(--bone);font:16px/1.6 Inter,sans-serif}
+.pole{position:fixed;left:0;top:0;bottom:0;width:10px;z-index:40;background:repeating-linear-gradient(-45deg,#efe7d6 0 10px,#7d2a25 10px 20px,#efe7d6 20px 30px,#2c4a7a 30px 40px);background-size:100% 56px;animation:pole 1.6s linear infinite}
+@keyframes pole{to{background-position:0 56px}}
+nav{position:fixed;top:0;left:10px;right:0;z-index:30;display:flex;justify-content:space-between;align-items:center;padding:18px clamp(16px,4vw,48px);background:linear-gradient(#0b0b0a,transparent)}
+.lg{font:700 22px Oswald;letter-spacing:.3em}
+.nl{display:flex;gap:30px;font:600 13px Oswald;letter-spacing:.22em;text-transform:uppercase;color:var(--mut)}.nl a:hover{color:var(--gold)}
+.bk{border:1px solid var(--gold);color:var(--gold);padding:10px 20px;font:600 13px Oswald;letter-spacing:.2em;text-transform:uppercase;transition:.3s}
+.bk:hover{background:var(--gold);color:#111}
+.hero{min-height:100vh;padding:110px clamp(20px,4vw,48px) 50px 30px;display:flex;flex-direction:column;justify-content:flex-end;position:relative;overflow:hidden}
+.hero::before{content:"";position:absolute;width:70vw;height:70vw;right:-20vw;top:-30vw;background:radial-gradient(circle,rgba(200,162,90,.16),transparent 60%)}
+.giant{font:700 clamp(110px,27vw,420px)/.78 Oswald;letter-spacing:-.01em;color:transparent;-webkit-text-stroke:2px var(--gold);background:linear-gradient(var(--gold),var(--gold)) no-repeat bottom/100% 0%;-webkit-background-clip:text;background-clip:text;animation:fill 2.6s .4s cubic-bezier(.6,0,.2,1) forwards;user-select:none}
+@keyframes fill{to{background-size:100% 100%}}
+.hrow{display:grid;grid-template-columns:1fr 1.4fr auto;gap:30px;align-items:end;margin-top:34px;border-top:1px solid var(--line);padding-top:26px}
+.est{font:600 14px/1.5 Oswald;letter-spacing:.24em;text-transform:uppercase;color:var(--mut)}
+.est b{color:var(--gold);font-size:26px;display:block;letter-spacing:.1em}
+.tg{font:italic 500 clamp(24px,3vw,38px)/1.2 'Playfair Display',serif}
+.seal{width:150px;height:150px;border-radius:50%;border:1px solid var(--gold);display:grid;place-items:center;text-align:center;color:var(--gold);position:relative;animation:spin 22s linear infinite}
+.seal div{animation:spin 22s linear infinite reverse}
+.seal b{display:block;font:700 40px/1 Oswald;color:var(--bone)}.seal small{font:600 11px Oswald;letter-spacing:.2em;text-transform:uppercase}
+.seal::before{content:"";position:absolute;inset:8px;border:1px dashed var(--line);border-radius:50%}
+@keyframes spin{to{transform:rotate(360deg)}}
+.band{background:repeating-linear-gradient(90deg,var(--gold) 0 2px,transparent 2px 14px);height:14px;opacity:.5}
+.sec{padding:110px clamp(20px,5vw,70px) 110px calc(clamp(20px,5vw,70px) + 10px)}
+.lbl{font:600 13px Oswald;letter-spacing:.3em;text-transform:uppercase;color:var(--gold);margin-bottom:22px;display:flex;align-items:center;gap:14px}
+.lbl::after{content:"";flex:1;height:1px;background:var(--line)}
+h2{font:700 clamp(46px,7vw,110px)/.9 Oswald;text-transform:uppercase;margin-bottom:50px}
+h2 em{font:italic 500 .55em 'Playfair Display',serif;text-transform:none;color:var(--gold);display:block;margin-top:10px}
+.about{display:grid;grid-template-columns:1.2fr 1fr;gap:60px;align-items:start}
+.about p{font-size:clamp(18px,1.8vw,22px);color:#d6cdb9}
+.amen{display:grid;gap:12px}
+.am{display:flex;gap:18px;align-items:center;border:1px solid var(--line);padding:20px 22px;transition:.3s}
+.am:hover{border-color:var(--gold)}
+.am i{font:700 30px Oswald;color:var(--gold);font-style:normal;width:46px}
+.am b{font:600 18px Oswald;letter-spacing:.08em;text-transform:uppercase;display:block}.am span{color:var(--mut);font-size:14px}
+.svc{border-top:1px solid var(--line)}
+.row{display:grid;grid-template-columns:90px 1fr 1fr 40px;gap:20px;align-items:center;padding:30px 20px;border-bottom:1px solid var(--line);transition:background .35s,color .35s,padding .35s;cursor:default}
+.row .n{font:600 16px Oswald;color:var(--gold)}
+.row h3{font:600 clamp(26px,3.4vw,46px)/1 Oswald;text-transform:uppercase}
+.row p{color:var(--mut)}.row .ar{font-size:26px;color:var(--gold);transition:transform .35s}
+.row:hover{background:var(--gold);color:#111;padding-left:34px}.row:hover p,.row:hover .n{color:#2a2010}.row:hover .ar{transform:rotate(-45deg);color:#111}
+.tix{display:flex;gap:16px;overflow-x:auto;padding-bottom:18px;scroll-snap-type:x mandatory}
+.tk{flex:0 0 230px;scroll-snap-align:start;background:var(--bone);color:#16130e;padding:26px 22px;position:relative;transition:transform .35s}
+.tk:hover{transform:translateY(-10px) rotate(-1.5deg)}
+.tk::before,.tk::after{content:"";position:absolute;left:-10px;top:60%;width:20px;height:20px;border-radius:50%;background:var(--bg)}
+.tk::after{left:auto;right:-10px}
+.tk .no{font:600 12px Oswald;letter-spacing:.26em;color:var(--ox)}
+.tk .mono{font:700 74px/1 Oswald;margin:18px 0 8px;color:#16130e}
+.tk b{font:600 20px/1.15 Oswald;text-transform:uppercase;display:block;min-height:46px}
+.tk span{font-size:13px;color:#6b6252}
+.tk a{display:block;margin-top:24px;padding-top:14px;border-top:1px dashed #b9ae98;font:600 12px Oswald;letter-spacing:.2em;text-transform:uppercase;color:var(--ox)}
+.qwrap{position:relative;min-height:300px;max-width:1000px}
+.q{position:absolute;inset:0;opacity:0;transition:opacity 1s;pointer-events:none}.q.on{opacity:1;pointer-events:auto}
+.q blockquote{font:italic 500 clamp(28px,4vw,54px)/1.2 'Playfair Display',serif}
+.q blockquote::before{content:"“";display:block;font:700 140px/0.6 'Playfair Display';color:var(--gold);margin-bottom:10px}
+.q figcaption{margin-top:26px;font:600 14px Oswald;letter-spacing:.24em;text-transform:uppercase;color:var(--mut)}
+.q figcaption span{color:#f5b301}
+.qd{display:flex;gap:10px;margin-top:20px}.qd button{width:34px;height:3px;border:0;background:var(--line);cursor:pointer}.qd button.on{background:var(--gold)}
+.ct{display:grid;grid-template-columns:1fr 1fr;gap:0;border:1px solid var(--line)}
+.ci{padding:clamp(26px,4vw,56px)}
+.ph{font:700 clamp(40px,5vw,72px)/1 Oswald;display:block;margin:10px 0 30px;color:var(--gold)}
+.ci p{color:#d6cdb9;margin-bottom:16px}.ci p small{display:block;color:var(--mut)}
+.chips{display:flex;flex-wrap:wrap;gap:8px;margin-top:26px}
+.chip{border:1px solid var(--line);padding:9px 16px;font:600 12px Oswald;letter-spacing:.18em;text-transform:uppercase;transition:.3s}.chip:hover{border-color:var(--gold);color:var(--gold)}
+.map iframe{width:100%;height:100%;min-height:440px;border:0;display:block;filter:grayscale(1) invert(.92) contrast(.9)}
+footer{padding:30px 30px 40px;color:var(--mut);font:600 12px Oswald;letter-spacing:.26em;text-transform:uppercase;display:flex;justify-content:space-between;flex-wrap:wrap;gap:12px}
+@media(max-width:860px){.nl{display:none}.hrow{grid-template-columns:1fr}.seal{position:absolute;right:20px;top:110px;width:110px;height:110px}.seal b{font-size:28px}
+.about,.ct{grid-template-columns:1fr}.row{grid-template-columns:50px 1fr 30px}.row p{grid-column:2/3}.qwrap{min-height:400px}.hero{min-height:88vh}}
+</style></head>
+<body>
+<div class="pole" aria-hidden="true"></div>
+<nav><a class="lg" href="#top">CHAIR</a><div class="nl"><a href="#svc">Услуги</a><a href="#team">Мастера</a><a href="#rev">Отзывы</a><a href="#ct">Контакты</a></div>
+<a class="bk" href="http://n559309.yclients.com/group:58288/city:3#1" target="_blank" rel="noopener">Записаться</a></nav>
+<header class="hero" id="top">
+ <div class="giant" aria-label="Chair">CHAIR</div>
+ <div class="hrow"><div class="est"><b>EST. 2017</b>Барбершоп · Казань<br>ул. Островского, 57в</div>
+ <p class="tg">Ваш стиль начинается с&nbsp;нашего кресла.</p>
+ <div class="seal"><div><b>5.0</b><small>519 оценок<br>в 2ГИС</small></div></div></div>
+</header>
+<div class="band"></div>
+
+<section class="sec"><div class="lbl">О нас</div>
+ <div class="about"><div><h2 class="r">С 2017<em>года в Казани</em></h2><p class="r">Chair работает с 2017 года. Мастера помогают выбрать форму, учитывают пожелания и подсказывают, чем ухаживать за волосами дома. В зоне ожидания есть приставка и напитки.</p></div>
+ <div class="amen"><div class="am r"><i>P</i><div><b>Парковка</b><span>Можно приехать на машине</span></div></div><div class="am r"><i>PS</i><div><b>PlayStation</b><span>Пока ждёте своей очереди</span></div></div><div class="am r"><i>☕</i><div><b>Напитки</b><span>В зоне ожидания</span></div></div></div></div></section>
+
+<section class="sec" id="svc" style="padding-top:20px"><div class="lbl">Услуги</div><h2 class="r">Что мы<em>делаем</em></h2>
+ <div class="svc"><div class="row r"><span class="n">01</span><h3>Мужская стрижка</h3><p>Аккуратно и детально: форму подбирают под ваши пожелания.</p><span class="ar">→</span></div><div class="row r"><span class="n">02</span><h3>Борода и бритьё</h3><p>Оформление бороды и бритьё у мастера.</p><span class="ar">→</span></div><div class="row r"><span class="n">03</span><h3>Подбор образа</h3><p>Мастер поможет с выбором формы, если сомневаетесь.</p><span class="ar">→</span></div><div class="row r"><span class="n">04</span><h3>Уход и укладка</h3><p>Советуют по укладке и подбирают средства для дома.</p><span class="ar">→</span></div></div></section>
+
+<section class="sec" id="team" style="padding-top:20px"><div class="lbl">Мастера</div><h2 class="r">Наши<em>мастера, которых хвалят в отзывах</em></h2>
+ <div class="tix"><div class="tk"><div class="no">МАСТЕР № 01</div><div class="mono">В</div><b>Виталий</b><span>барбер</span><a href="http://n559309.yclients.com/group:58288/city:3#1" target="_blank" rel="noopener">Записаться →</a></div><div class="tk"><div class="no">МАСТЕР № 02</div><div class="mono">А</div><b>Александр Лавров</b><span>барбер</span><a href="http://n559309.yclients.com/group:58288/city:3#1" target="_blank" rel="noopener">Записаться →</a></div><div class="tk"><div class="no">МАСТЕР № 03</div><div class="mono">Д</div><b>Данил</b><span>барбер</span><a href="http://n559309.yclients.com/group:58288/city:3#1" target="_blank" rel="noopener">Записаться →</a></div><div class="tk"><div class="no">МАСТЕР № 04</div><div class="mono">А</div><b>Артур</b><span>барбер</span><a href="http://n559309.yclients.com/group:58288/city:3#1" target="_blank" rel="noopener">Записаться →</a></div><div class="tk"><div class="no">МАСТЕР № 05</div><div class="mono">Ш</div><b>Шамиль</b><span>барбер</span><a href="http://n559309.yclients.com/group:58288/city:3#1" target="_blank" rel="noopener">Записаться →</a></div><div class="tk"><div class="no">МАСТЕР № 06</div><div class="mono">Н</div><b>Николай Третьяков</b><span>барбер</span><a href="http://n559309.yclients.com/group:58288/city:3#1" target="_blank" rel="noopener">Записаться →</a></div><div class="tk"><div class="no">МАСТЕР № 07</div><div class="mono">С</div><b>Станислав Переверзев</b><span>барбер</span><a href="http://n559309.yclients.com/group:58288/city:3#1" target="_blank" rel="noopener">Записаться →</a></div><div class="tk"><div class="no">МАСТЕР № 08</div><div class="mono">А</div><b>Андрей</b><span>барбер</span><a href="http://n559309.yclients.com/group:58288/city:3#1" target="_blank" rel="noopener">Записаться →</a></div></div></section>
+
+<section class="sec" id="rev" style="padding-top:20px"><div class="lbl">Отзывы · 5.0 ★ · 519 оценок</div>
+ <div class="qwrap"><figure class="q on"><blockquote>Записываюсь к мастеру Виталию, он знает своё дело и делает лучшие стрижки в моей жизни</blockquote><figcaption><span><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span> &nbsp; Правда Мира · 2ГИС</figcaption></figure><figure class="q"><blockquote>Отличная стрижка, аккуратная, стригся у Александра Л. Особый плюс за атмосферу, очень уютно и комфортно.</blockquote><figcaption><span><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span> &nbsp; Ринат · 2ГИС</figcaption></figure><figure class="q"><blockquote>Виталий, я в полном восторге! Не просто «подстриг», а создал именно тот образ, который я хотел</blockquote><figcaption><span><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span> &nbsp; Егор · 2ГИС</figcaption></figure><figure class="q"><blockquote>стригся у мастера александра, очень благодарен, помог с выбором, все быстро и классно</blockquote><figcaption><span><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span> &nbsp; Руслан · 2ГИС</figcaption></figure><figure class="q"><blockquote>Салон красивый и современный, персонал вежливый, мастер отличный💯.</blockquote><figcaption><span><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg><svg viewBox="0 0 24 24" width="1em" height="1em" fill="currentColor" aria-hidden="true"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></span> &nbsp; Кирилл · 2ГИС</figcaption></figure></div><div class="qd"><button aria-label="Отзыв 1" class=on></button><button aria-label="Отзыв 2"></button><button aria-label="Отзыв 3"></button><button aria-label="Отзыв 4"></button><button aria-label="Отзыв 5"></button></div></section>
+
+<section class="sec" id="ct" style="padding-top:20px"><div class="lbl">Контакты</div>
+ <div class="ct r"><div class="ci"><h2 style="margin-bottom:10px">Ждём<em>в кресле</em></h2>
+  <a class="ph" href="tel:+79083399909">+7 908 339-99-09</a>
+  <p>ул. Островского, 57в<small>1 этаж, левое крыло · Вахитовский район</small></p>
+  <p>Ежедневно 10:00–21:00<small>В праздничные дни уточняйте время по телефону</small></p>
+  <div class="chips"><a class="chip" href="http://n559309.yclients.com/group:58288/city:3#1" target="_blank" rel="noopener">Онлайн-запись</a><a class="chip" href="https://t.me/chairbarbershop" target="_blank" rel="noopener">Telegram</a><a class="chip" href="https://wa.me/79083399909" target="_blank" rel="noopener">WhatsApp</a><a class="chip" href="https://vk.com/chairbarbershop" target="_blank" rel="noopener">ВКонтакте</a><a class="chip" href="http://t.me/chair_barbershop" target="_blank" rel="noopener">Канал</a><a class="chip" href="https://2gis.ru/kazan/firm/70000001030976629" target="_blank" rel="noopener">2ГИС</a></div></div>
+ <div class="map"><iframe src="https://yandex.ru/map-widget/v1/?text=%D0%9A%D0%B0%D0%B7%D0%B0%D0%BD%D1%8C%2C+%D1%83%D0%BB.+%D0%9E%D1%81%D1%82%D1%80%D0%BE%D0%B2%D1%81%D0%BA%D0%BE%D0%B3%D0%BE%2C+57%D0%B2&amp;z=16" loading="lazy" title="Карта: ул. Островского, 57в"></iframe></div></div></section>
+<footer><span>Chair barbershop · с 2017</span><span>ул. Островского, 57в, Казань</span></footer>
+<script>const io=new IntersectionObserver(es=>es.forEach(x=>{if(x.isIntersecting){x.target.classList.add('in');io.unobserve(x.target)}}),{threshold:.1});
+document.querySelectorAll('.r').forEach(el=>io.observe(el));
+function kznNow(){const d=new Date();return (d.getUTCHours()*60+d.getUTCMinutes()+180)%1440}
+function isOpen(a,b){const m=kznNow();return m>=a&&m<b}
+
+const qs=[...document.querySelectorAll('.q')],ds=[...document.querySelectorAll('.qd button')];let qi=0;
+function sq(i){qs[qi].classList.remove('on');ds[qi].classList.remove('on');qi=i;qs[qi].classList.add('on');ds[qi].classList.add('on')}
+ds.forEach((d,i)=>d.onclick=()=>{sq(i);clearInterval(qt)});let qt=setInterval(()=>sq((qi+1)%qs.length),5500);
+</script>
+</body></html>
