@@ -1,0 +1,556 @@
+<!doctype html>
+<html lang="ru">
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width,initial-scale=1">
+<title>Витрина — сайты для местного бизнеса</title>
+<meta name="description" content="Делаем сайты для кафе, салонов, автосервисов и клиник. Сначала показываем готовый вариант — платите, только если понравилось.">
+<meta name="theme-color" content="#F1ECE3">
+<meta property="og:type" content="website">
+<meta property="og:title" content="Витрина — сайты для местного бизнеса">
+<meta property="og:description" content="Сначала покажем ваш сайт — потом заплатите.">
+<meta property="og:image" content="https://vitrinalab.github.io/og.png">
+<meta property="og:url" content="https://vitrinalab.github.io/">
+<link rel="icon" href="favicon.svg" type="image/svg+xml">
+<link rel="preconnect" href="https://fonts.googleapis.com">
+<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+<link href="https://fonts.googleapis.com/css2?family=Unbounded:wght@500;700;900&family=Manrope:wght@400;500;600;700;800&family=Playfair+Display:ital,wght@0,700;1,500&family=Oswald:wght@500;700&display=swap" rel="stylesheet">
+<style>
+:root{
+  --paper:#F1ECE3; --card:#FAF7F2; --ink:#141210; --ink2:#2A2622; --muted:#6E675F;
+  --line:rgba(20,18,16,.12); --accent:#FF5126; --sun:#FFD84D;
+  --r:24px; --display:"Unbounded",system-ui,sans-serif; --body:"Manrope",system-ui,sans-serif;
+}
+*{box-sizing:border-box;margin:0;padding:0}
+html{scroll-behavior:smooth}
+body{background:var(--paper);color:var(--ink);font:500 17px/1.6 var(--body);-webkit-font-smoothing:antialiased;overflow-x:hidden}
+a{color:inherit;text-decoration:none}
+img,svg{display:block}
+.wrap{max-width:1200px;margin:0 auto;padding:0 24px}
+.eyebrow{font:700 13px/1 var(--body);letter-spacing:.14em;text-transform:uppercase;color:var(--muted)}
+h1,h2,h3{font-family:var(--display);font-weight:700;letter-spacing:-.02em;line-height:1.05}
+h2{font-size:clamp(32px,5vw,60px)}
+.btn{display:inline-flex;align-items:center;gap:10px;font:700 16px/1 var(--body);padding:18px 26px;border-radius:999px;transition:transform .2s,background .2s,color .2s;cursor:pointer;border:0}
+.btn:hover{transform:translateY(-2px)}
+.btn-accent{background:var(--accent);color:#fff}
+.btn-ink{background:var(--ink);color:var(--paper)}
+.btn-ghost{background:transparent;color:var(--ink);box-shadow:inset 0 0 0 2px var(--ink)}
+.btn svg{width:18px;height:18px}
+
+/* header */
+header{position:sticky;top:0;z-index:50;background:rgba(241,236,227,.82);backdrop-filter:blur(14px);-webkit-backdrop-filter:blur(14px);border-bottom:1px solid transparent;transition:border-color .3s}
+header.scrolled{border-color:var(--line)}
+.nav{display:flex;align-items:center;justify-content:space-between;height:76px}
+.logo{display:flex;align-items:center;gap:12px;font:800 22px/1 var(--display);letter-spacing:-.03em}
+.logo img{width:40px;height:40px}
+.menu{display:flex;gap:34px;font-weight:600;font-size:15px}
+.menu a{opacity:.75;transition:opacity .2s}
+.menu a:hover{opacity:1}
+.nav .btn{padding:13px 20px;font-size:14px}
+.burger{display:none;width:44px;height:44px;border-radius:50%;border:0;background:var(--ink);color:var(--paper);cursor:pointer}
+.burger span{display:block;width:18px;height:2px;background:currentColor;margin:4px auto;transition:transform .25s}
+@media (max-width:900px){
+  .menu{position:fixed;inset:76px 0 auto 0;flex-direction:column;gap:0;background:var(--paper);border-bottom:1px solid var(--line);padding:8px 24px 24px;transform:translateY(-130%);transition:transform .35s;z-index:-1}
+  .menu a{padding:16px 0;border-bottom:1px solid var(--line);font-size:18px;opacity:1}
+  body.open .menu{transform:none}
+  .nav .btn{display:none}
+  .burger{display:block}
+  body.open .burger span:first-child{transform:translateY(3px) rotate(45deg)}
+  body.open .burger span:last-child{transform:translateY(-3px) rotate(-45deg)}
+}
+
+/* hero */
+.hero{padding:64px 0 40px}
+.hero-grid{display:grid;grid-template-columns:1.05fr .95fr;gap:56px;align-items:center}
+.hero h1{font-size:clamp(38px,5.4vw,78px);margin:22px 0 26px}
+.hero h1 em{font-style:normal;color:var(--accent)}
+.hero p.lead{font-size:clamp(17px,1.6vw,20px);color:var(--ink2);max-width:540px}
+.hero .ctas{display:flex;flex-wrap:wrap;gap:12px;margin:34px 0 44px}
+.facts{display:grid;grid-template-columns:repeat(3,1fr);gap:0;border-top:1px solid var(--line)}
+.facts div{padding:18px 16px 0 0}
+.facts b{display:block;font:800 26px/1.1 var(--display);letter-spacing:-.03em}
+.facts span{font-size:14px;color:var(--muted);line-height:1.35;display:block;margin-top:6px}
+
+/* shopfront */
+.shop{position:relative;background:var(--ink);border-radius:28px;padding:92px 26px 30px;min-height:540px;overflow:hidden;box-shadow:0 40px 80px -40px rgba(20,18,16,.55)}
+.awning{position:absolute;left:0;right:0;top:0;height:46px;background:repeating-linear-gradient(90deg,var(--accent) 0 52px,#fff 52px 104px)}
+.awning::after{content:"";position:absolute;left:0;right:0;top:100%;height:26px;
+  background:radial-gradient(circle at 26px 0,var(--accent) 26px,transparent 26.5px) 0 0/104px 26px repeat-x,
+             radial-gradient(circle at 26px 0,#fff 26px,transparent 26.5px) 52px 0/104px 26px repeat-x}
+.sign{position:absolute;top:84px;left:50%;transform:translateX(-50%);font:700 12px/1 var(--body);letter-spacing:.3em;text-transform:uppercase;color:rgba(241,236,227,.55);white-space:nowrap}
+.phones{position:relative;height:430px;margin-top:22px}
+.shop{container-type:inline-size;--pw:min(188px,37cqw)}
+.phone{position:absolute;width:var(--pw);aspect-ratio:9/18.5;border-radius:30px;background:#000;padding:7px;box-shadow:0 30px 50px -20px rgba(0,0,0,.6);animation:float 7s ease-in-out infinite}
+.phone .mini{border-radius:24px;height:100%}
+.phone:nth-child(1){left:2%;top:40px;transform:rotate(-8deg);animation-delay:-2s}
+.phone:nth-child(2){left:50%;top:0;margin-left:calc(var(--pw) / -2);z-index:2}
+.phone:nth-child(3){right:2%;top:46px;transform:rotate(7deg);animation-delay:-4s}
+@keyframes float{50%{translate:0 -10px}}
+
+/* mini mock sites */
+.phone,.browser{container-type:inline-size}
+.mini{overflow:hidden;display:flex;flex-direction:column;gap:5cqw;padding:7cqw 7cqw 0;height:100%;position:relative}
+.m-nav{display:flex;align-items:center;gap:3cqw;font-size:6.5cqw;font-weight:800}
+.m-nav b{margin-right:auto}
+.m-nav i{width:6cqw;height:1.4cqw;border-radius:2px;background:currentColor;opacity:.35}
+.m-t{font-size:11cqw;line-height:1.02;font-weight:800}
+.m-l{height:2.6cqw;border-radius:2cqw;background:currentColor;opacity:.22;width:85%;margin-top:3cqw}
+.m-l.s{width:60%}
+.m-btn{display:inline-block;margin-top:5cqw;font-size:5.4cqw;font-weight:800;padding:3.4cqw 6cqw;border-radius:99px}
+.m-img{flex:1;min-height:28cqw;border-radius:5cqw 5cqw 0 0}
+.m-rows{display:grid;grid-template-columns:1fr 1fr;gap:3cqw}
+.m-rows i{height:16cqw;border-radius:3cqw;background:currentColor;opacity:.1}
+
+.m-bistro{background:#F6E6D2;color:#3B1F12;font-family:"Playfair Display",serif}
+.m-bistro .m-t{font-weight:700;font-style:italic}
+.m-bistro .m-btn{background:#C4532A;color:#FFF3E6;font-family:var(--body)}
+.m-bistro .m-img{background:radial-gradient(circle at 50% 62%,#F6E6D2 0 17cqw,#fff 17.5cqw 26cqw,transparent 26.5cqw),radial-gradient(circle at 50% 62%,#E79A55,#B9461F 70%)}
+
+.m-barber{background:#121212;color:#E9D7A8;font-family:"Oswald",sans-serif;text-transform:uppercase}
+.m-barber .m-t{font-size:14cqw;font-weight:700;letter-spacing:.02em}
+.m-barber .m-btn{background:#C9A45C;color:#121212}
+.m-barber .m-img{background:repeating-linear-gradient(135deg,#C9A45C 0 4cqw,#121212 4cqw 8cqw,#B23A3A 8cqw 12cqw,#121212 12cqw 16cqw);opacity:.9}
+
+.m-vet{background:#E8F5EF;color:#0F4C3E;font-family:var(--body)}
+.m-vet .m-btn{background:#1F8A70;color:#fff}
+.m-vet .m-img{background:radial-gradient(circle at 30% 40%,#fff 0 8cqw,transparent 8.5cqw),radial-gradient(circle at 62% 30%,#fff 0 6cqw,transparent 6.5cqw),radial-gradient(circle at 74% 62%,#fff 0 7cqw,transparent 7.5cqw),linear-gradient(160deg,#7CCBB0,#1F8A70)}
+
+.m-tire{background:#FFD400;color:#111;font-family:var(--display)}
+.m-tire .m-t{font-size:10.5cqw;font-weight:900;letter-spacing:-.04em}
+.m-tire .m-btn{background:#111;color:#FFD400;border-radius:2cqw}
+.m-tire .m-img{border-radius:0;background:radial-gradient(circle at 50% 70%,#FFD400 0 9cqw,#333 9.5cqw 15cqw,#111 15.5cqw 30cqw,transparent 30.5cqw),repeating-linear-gradient(90deg,#111 0 3cqw,#FFD400 3cqw 6cqw)}
+
+.m-podo{background:#FBEFF1;color:#5A2A35;font-family:"Playfair Display",serif}
+.m-podo .m-t{font-weight:500;font-style:italic}
+.m-podo .m-btn{background:#fff;color:#B35A6E;box-shadow:inset 0 0 0 .6cqw #B35A6E;font-family:var(--body)}
+.m-podo .m-img{border-radius:50cqw 50cqw 0 0;background:linear-gradient(180deg,#F2C6CF,#D98C9C)}
+
+.m-audio{background:#0A0D24;color:#E8ECFF;font-family:var(--display)}
+.m-audio .m-t{font-size:9.5cqw;background:linear-gradient(90deg,#3EF2FF,#FF3EC8);-webkit-background-clip:text;background-clip:text;color:transparent}
+.m-audio .m-btn{background:linear-gradient(90deg,#3EF2FF,#FF3EC8);color:#0A0D24}
+.m-audio .m-img{border-radius:0;background:linear-gradient(0deg,#0A0D24 0,transparent 1px) 0 0/100% 5cqw,linear-gradient(90deg,#3EF2FF,#9B5CFF,#FF3EC8);-webkit-mask:repeating-linear-gradient(90deg,#000 0 5cqw,transparent 5cqw 7cqw);mask:repeating-linear-gradient(90deg,#000 0 5cqw,transparent 5cqw 7cqw);clip-path:polygon(0 70%,7% 40%,14% 55%,21% 20%,28% 45%,35% 10%,42% 35%,49% 25%,56% 50%,63% 15%,70% 40%,77% 30%,84% 55%,91% 35%,100% 60%,100% 100%,0 100%)}
+
+/* marquee */
+.marquee{background:var(--ink);color:var(--paper);overflow:hidden;padding:22px 0;margin-top:40px}
+.marquee-track{display:flex;gap:44px;width:max-content;animation:run 38s linear infinite;font:700 clamp(20px,2.4vw,30px)/1 var(--display);letter-spacing:-.02em;white-space:nowrap}
+.marquee-track span{display:flex;align-items:center;gap:44px}
+.marquee-track span::after{content:"";width:14px;height:14px;border-radius:50%;background:var(--accent)}
+@keyframes run{to{transform:translateX(-50%)}}
+
+section{padding:110px 0}
+.head{display:flex;justify-content:space-between;align-items:end;gap:40px;margin-bottom:56px;flex-wrap:wrap}
+.head p{max-width:420px;color:var(--ink2)}
+.head .eyebrow{display:block;margin-bottom:18px}
+
+/* why */
+.why-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px}
+.why-card{border-radius:var(--r);padding:40px;min-height:300px;display:flex;flex-direction:column;justify-content:space-between}
+.why-card h3{font-size:clamp(22px,2.4vw,30px)}
+.why-card p{margin-top:16px;max-width:460px}
+.why-card.bad{background:var(--card);border:1px solid var(--line)}
+.why-card.good{background:var(--accent);color:#fff}
+.why-card .tag{align-self:flex-start;font:700 12px/1 var(--body);letter-spacing:.12em;text-transform:uppercase;padding:9px 14px;border-radius:99px;background:rgba(20,18,16,.08)}
+.why-card.good .tag{background:rgba(255,255,255,.2)}
+
+/* features */
+.feat-grid{display:grid;grid-template-columns:repeat(3,1fr);border-top:1px solid var(--line);border-left:1px solid var(--line)}
+.feat{padding:36px 32px 40px;border-right:1px solid var(--line);border-bottom:1px solid var(--line);transition:background .25s}
+.feat:hover{background:var(--card)}
+.feat .ico{width:52px;height:52px;border-radius:16px;background:var(--ink);color:var(--paper);display:grid;place-items:center;margin-bottom:26px}
+.feat .ico svg{width:24px;height:24px}
+.feat h3{font-size:20px;margin-bottom:10px;letter-spacing:-.01em}
+.feat p{color:var(--muted);font-size:16px}
+
+/* works */
+#works{background:var(--ink);color:var(--paper)}
+#works .eyebrow{color:rgba(241,236,227,.55)}
+#works .head p{color:rgba(241,236,227,.75)}
+.works-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:24px}
+.work{border-radius:var(--r);background:#1F1C19;padding:14px 14px 24px;transition:transform .3s}
+.work:hover{transform:translateY(-6px)}
+.browser{border-radius:14px;overflow:hidden;background:#000}
+.browser .bar{display:flex;gap:6px;padding:10px 12px;background:#2C2824}
+.browser .bar i{width:9px;height:9px;border-radius:50%;background:#55504A}
+.browser .mini{height:auto;aspect-ratio:4/3.3;padding-bottom:0}
+.work-meta{padding:20px 8px 0}
+.work-meta .row{display:flex;justify-content:space-between;align-items:center;margin-bottom:10px}
+.work-meta .niche{font:700 20px/1.1 var(--display)}
+.work-meta .pill{font-size:12px;font-weight:700;letter-spacing:.08em;text-transform:uppercase;padding:6px 11px;border-radius:99px;border:1px solid rgba(241,236,227,.25);color:rgba(241,236,227,.7)}
+.work-meta p{color:rgba(241,236,227,.65);font-size:15px;line-height:1.5}
+.works-note{margin-top:40px;display:flex;align-items:center;gap:20px;justify-content:space-between;flex-wrap:wrap;padding:26px 30px;border-radius:var(--r);border:1px dashed rgba(241,236,227,.25)}
+.works-note p{color:rgba(241,236,227,.8);max-width:640px}
+
+/* steps */
+.steps{display:grid;grid-template-columns:repeat(4,1fr);gap:20px;counter-reset:s}
+.step{position:relative;background:var(--card);border:1px solid var(--line);border-radius:var(--r);padding:30px 26px 34px}
+.step::before{counter-increment:s;content:"0" counter(s);font:900 54px/1 var(--display);color:var(--accent);display:block;margin-bottom:34px;letter-spacing:-.04em}
+.step h3{font-size:19px;margin-bottom:10px;letter-spacing:-.01em}
+.step p{font-size:15.5px;color:var(--muted)}
+.step.free{background:var(--sun);border-color:transparent}
+.step.free p{color:var(--ink2)}
+
+/* prices */
+.prices{display:grid;grid-template-columns:repeat(3,1fr);gap:20px;align-items:stretch}
+.price{border-radius:var(--r);padding:36px 32px;background:var(--card);border:1px solid var(--line);display:flex;flex-direction:column}
+.price.hot{background:var(--ink);color:var(--paper);border-color:var(--ink);position:relative}
+.price.hot::before{content:"Чаще выбирают";align-self:flex-start;margin-bottom:14px;background:var(--accent);color:#fff;font-size:12px;font-weight:800;letter-spacing:.06em;text-transform:uppercase;padding:7px 12px;border-radius:99px}
+.price h3{font-size:22px}
+.price .sum{display:inline-block;font:800 13px/1 var(--body);letter-spacing:.1em;text-transform:uppercase;margin:18px 0 12px;padding:8px 12px;border-radius:99px;background:rgba(20,18,16,.07)}
+.price.hot .sum{background:rgba(241,236,227,.14)}
+.price .sum small{font:600 16px var(--body);letter-spacing:0;opacity:.6}
+.price .for{color:var(--muted);font-size:15px;margin-bottom:24px}
+.price.hot .for{color:rgba(241,236,227,.6)}
+.price ul{list-style:none;display:grid;gap:12px;margin-bottom:32px;flex:1}
+.price li{display:flex;gap:12px;font-size:15.5px;line-height:1.45}
+.price li::before{content:"";flex:none;width:20px;height:20px;margin-top:1px;border-radius:50%;background:var(--accent) url("data:image/svg+xml,%3Csvg xmlns='http://www.w3.org/2000/svg' viewBox='0 0 20 20'%3E%3Cpath d='M5.5 10.5l3 3 6-7' fill='none' stroke='%23fff' stroke-width='2.4' stroke-linecap='round' stroke-linejoin='round'/%3E%3C/svg%3E") center/100%}
+.price .btn{justify-content:center}
+.price.hot .btn{background:var(--paper);color:var(--ink)}
+.price-note{margin-top:22px;color:var(--muted);font-size:15px}
+
+/* faq */
+.faq-grid{display:grid;grid-template-columns:.8fr 1.2fr;gap:60px}
+details{border-bottom:1px solid var(--line)}
+summary{list-style:none;cursor:pointer;display:flex;justify-content:space-between;align-items:center;gap:20px;padding:26px 0;font:700 clamp(17px,1.6vw,21px)/1.3 var(--body)}
+summary::-webkit-details-marker{display:none}
+summary::after{content:"+";flex:none;width:40px;height:40px;border-radius:50%;background:var(--card);border:1px solid var(--line);display:grid;place-items:center;font:500 24px/1 var(--body);transition:transform .25s,background .25s}
+details[open] summary::after{transform:rotate(45deg);background:var(--accent);color:#fff;border-color:var(--accent)}
+details p{padding:0 60px 26px 0;color:var(--ink2)}
+
+/* cta */
+.cta{padding:0 0 110px}
+.cta-box{position:relative;overflow:hidden;background:var(--accent);color:#fff;border-radius:36px;padding:clamp(40px,7vw,90px);display:grid;grid-template-columns:1.3fr .7fr;gap:40px;align-items:end}
+.cta-box h2{font-size:clamp(34px,5.4vw,72px)}
+.cta-box p{margin-top:22px;font-size:18px;max-width:520px;opacity:.92}
+.cta-actions{display:grid;gap:12px}
+.cta-actions .btn{justify-content:space-between;background:#fff;color:var(--ink);padding:20px 26px}
+.cta-actions .btn.alt{background:rgba(255,255,255,.14);color:#fff;box-shadow:inset 0 0 0 1.5px rgba(255,255,255,.5)}
+.cta-box .ring{position:absolute;right:-120px;top:-160px;width:420px;height:420px;border-radius:50%;border:70px solid rgba(255,255,255,.1);pointer-events:none}
+
+footer{border-top:1px solid var(--line);padding:40px 0 50px}
+.foot{display:flex;justify-content:space-between;align-items:center;gap:24px;flex-wrap:wrap}
+.socials{display:flex;gap:10px}
+.socials a{width:48px;height:48px;border-radius:50%;background:var(--ink);color:var(--paper);display:grid;place-items:center;transition:background .2s}
+.socials a:hover{background:var(--accent)}
+.socials svg{width:20px;height:20px}
+.fine{margin-top:26px;font-size:13px;color:var(--muted)}
+
+/* reveal */
+.rv{opacity:0;transform:translateY(28px);transition:opacity .8s cubic-bezier(.2,.7,.2,1),transform .8s cubic-bezier(.2,.7,.2,1)}
+.rv.in{opacity:1;transform:none}
+
+@media (max-width:1020px){
+  .hero-grid{grid-template-columns:1fr;gap:48px}
+  .works-grid,.prices{grid-template-columns:1fr 1fr}
+  .steps{grid-template-columns:1fr 1fr}
+  .feat-grid{grid-template-columns:1fr 1fr}
+  .faq-grid{grid-template-columns:1fr;gap:20px}
+  .cta-box{grid-template-columns:1fr}
+}
+@media (max-width:640px){
+  body{font-size:16px}
+  .wrap{padding:0 16px}
+  .hero{padding-top:36px}
+  section{padding:80px 0}
+  .facts b{font-size:20px}
+  .facts span{font-size:12.5px}
+  .shop{min-height:430px;padding:80px 12px 20px}
+  .phones{height:350px}
+  .shop{--pw:min(150px,44cqw)}
+  .phone{border-radius:24px;padding:5px}
+  .phone .mini{border-radius:19px}
+  .phone:nth-child(1){left:-4%}
+  .phone:nth-child(3){right:-4%}
+  .why-grid,.works-grid,.prices,.steps,.feat-grid{grid-template-columns:1fr}
+  .why-card{padding:30px 26px;min-height:0;gap:30px}
+  .head{margin-bottom:36px}
+  details p{padding-right:0}
+  .cta-box{border-radius:28px}
+}
+@media (prefers-reduced-motion:reduce){
+  *{animation:none!important;transition:none!important}
+  .rv{opacity:1;transform:none}
+}
+</style>
+</head>
+<body>
+
+<header id="top">
+  <div class="wrap nav">
+    <a class="logo" href="#top"><img src="favicon.svg" alt="">витрина</a>
+    <nav class="menu" id="menu">
+      <a href="#works">Работы</a>
+      <a href="#steps">Как работаем</a>
+      <a href="#prices">Стоимость</a>
+      <a href="#faq">Вопросы</a>
+    </nav>
+    <a class="btn btn-ink" href="https://t.me/vitrinalab" target="_blank" rel="noopener">Обсудить сайт</a>
+    <button class="burger" aria-label="Меню" onclick="document.body.classList.toggle('open')"><span></span><span></span></button>
+  </div>
+</header>
+
+<main>
+<section class="hero">
+  <div class="wrap hero-grid">
+    <div>
+      <span class="eyebrow">Веб-студия · сайты для местного бизнеса</span>
+      <h1>Сайт для вашего дела. <em>Сначала покажем</em> — потом заплатите.</h1>
+      <p class="lead">Делаем сайты для кафе, салонов, автосервисов и клиник. Собираем всё из вашей карточки на картах и отзывов клиентов, делаем готовый вариант — и показываем его до оплаты.</p>
+      <div class="ctas">
+        <a class="btn btn-accent" href="https://t.me/vitrinalab" target="_blank" rel="noopener">Хочу такой сайт
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn btn-ghost" href="#works">Смотреть работы</a>
+      </div>
+      <div class="facts">
+        <div><b>0 ₽</b><span>демо-версия<br>до оплаты</span></div>
+        <div><b>2–3 дня</b><span>первый вариант<br>вашего сайта</span></div>
+        <div><b>1 : 1</b><span>свой дизайн<br>без шаблонов</span></div>
+      </div>
+    </div>
+
+    <div class="shop" aria-hidden="true">
+      <div class="awning"></div>
+      <div class="sign">ваш бизнес — на витрине</div>
+      <div class="phones">
+        <div class="phone"><div class="mini m-barber">
+          <div class="m-nav"><b>Barber</b><i></i><i></i></div>
+          <div><div class="m-t">Стрижка<br>и борода</div><div class="m-l"></div><div class="m-l s"></div><span class="m-btn">Записаться</span></div>
+          <div class="m-img"></div>
+        </div></div>
+        <div class="phone"><div class="mini m-bistro">
+          <div class="m-nav"><b>Бистро</b><i></i><i></i></div>
+          <div><div class="m-t">Домашняя кухня каждый день</div><div class="m-l"></div><div class="m-l s"></div><span class="m-btn">Меню</span></div>
+          <div class="m-img"></div>
+        </div></div>
+        <div class="phone"><div class="mini m-vet">
+          <div class="m-nav"><b>Ветклиника</b><i></i></div>
+          <div><div class="m-t">Заботимся о&nbsp;вашем питомце</div><div class="m-l"></div><div class="m-l s"></div><span class="m-btn">Позвонить</span></div>
+          <div class="m-img"></div>
+        </div></div>
+      </div>
+    </div>
+  </div>
+
+  <div class="marquee" aria-hidden="true">
+    <div class="marquee-track">
+      <span>Кафе и бистро</span><span>Барбершопы</span><span>Автосервисы</span><span>Ветклиники</span><span>Салоны красоты</span><span>Шиномонтаж</span><span>Магазины</span><span>Массаж и SPA</span>
+      <span>Кафе и бистро</span><span>Барбершопы</span><span>Автосервисы</span><span>Ветклиники</span><span>Салоны красоты</span><span>Шиномонтаж</span><span>Магазины</span><span>Массаж и SPA</span>
+    </div>
+  </div>
+</section>
+
+<section id="why">
+  <div class="wrap">
+    <div class="head rv">
+      <div><span class="eyebrow">Зачем сайт</span><h2>Клиент ищет вас<br>в телефоне</h2></div>
+      <p>И решает за минуту: позвонить вам или конкуренту. Сайт — это витрина, где сразу видно, почему стоит выбрать именно вас.</p>
+    </div>
+    <div class="why-grid">
+      <div class="why-card bad rv">
+        <span class="tag">Без сайта</span>
+        <div><h3>Только карточка на картах</h3><p>Пара фото, часы работы и сотня соседей в выдаче. Цен не видно, меню не открыть, записаться — только звонком.</p></div>
+      </div>
+      <div class="why-card good rv">
+        <span class="tag">С сайтом</span>
+        <div><h3>Своя витрина в интернете</h3><p>Цены, меню, работы и отзывы — в одном месте. Кнопка «позвонить», маршрут и запись — в один тап с телефона.</p></div>
+      </div>
+    </div>
+  </div>
+</section>
+
+<section id="features" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rv">
+      <div><span class="eyebrow">Что внутри</span><h2>Всё, что нужно<br>с первого дня</h2></div>
+      <p>Никаких конструкторов и ежемесячных подписок на платформы. Готовый сайт, который просто работает.</p>
+    </div>
+    <div class="feat-grid rv">
+      <div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><rect x="6" y="2" width="12" height="20" rx="3"/><path d="M11 18h2"/></svg></div><h3>Сначала — под телефон</h3><p>Большинство клиентов придут со смартфона. Поэтому сайт удобен в первую очередь там.</p></div>
+      <div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M22 16.9v3a2 2 0 0 1-2.2 2 19.8 19.8 0 0 1-8.6-3.1 19.5 19.5 0 0 1-6-6A19.8 19.8 0 0 1 2.1 4.2 2 2 0 0 1 4.1 2h3a2 2 0 0 1 2 1.7c.1 1 .4 1.9.7 2.8a2 2 0 0 1-.5 2.1L8 9.9a16 16 0 0 0 6 6l1.3-1.3a2 2 0 0 1 2.1-.4c.9.3 1.8.6 2.8.7a2 2 0 0 1 1.7 2z"/></svg></div><h3>Звонок в один тап</h3><p>Кнопки «позвонить», «написать» и «записаться» всегда под рукой.</p></div>
+      <div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 22s-8-6.5-8-13a8 8 0 0 1 16 0c0 6.5-8 13-8 13z"/><circle cx="12" cy="9" r="3"/></svg></div><h3>Карта и маршрут</h3><p>Адрес, часы работы и построение маршрута — чтобы до вас было легко добраться.</p></div>
+      <div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 2l3.1 6.3 6.9 1-5 4.9 1.2 6.8L12 17.8 5.8 21l1.2-6.8-5-4.9 6.9-1z"/></svg></div><h3>Реальные отзывы</h3><p>Показываем настоящие отзывы ваших клиентов — слово в слово, без выдумок.</p></div>
+      <div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M4 6h16M4 12h16M4 18h10"/></svg></div><h3>Цены и меню</h3><p>Прайс, меню или каталог услуг — понятно и красиво, легко обновить.</p></div>
+      <div class="feat"><div class="ico"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"><path d="M12 3l1.9 5.8L20 9l-4.9 3.6L17 18.5 12 15l-5 3.5 1.9-5.9L4 9l6.1-.2z" opacity="0"/><circle cx="12" cy="12" r="9"/><path d="M8 12.5l2.5 2.5L16 9.5"/></svg></div><h3>Свой дизайн</h3><p>Каждый сайт рисуем под характер бизнеса: барбершоп не похож на ветклинику.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="works">
+  <div class="wrap">
+    <div class="head rv">
+      <div><span class="eyebrow">Работы</span><h2>Шесть бизнесов —<br>шесть характеров</h2></div>
+      <p>Концепты, сделанные для компаний Казани. Ни одного шаблона: у каждого свои шрифты, цвета и композиция.</p>
+    </div>
+    <div class="works-grid">
+      <article class="work rv">
+        <div class="browser"><div class="bar"><i></i><i></i><i></i></div><div class="mini m-bistro">
+          <div class="m-nav"><b>Бистро</b><i></i><i></i><i></i></div>
+          <div><div class="m-t">Домашняя кухня каждый день</div><div class="m-l s"></div><span class="m-btn">Меню</span></div>
+          <div class="m-img"></div></div></div>
+        <div class="work-meta"><div class="row"><span class="niche">Бистро</span><span class="pill">Концепт</span></div><p>Тёплая «ресторанная» типографика, меню и путь до двери.</p></div>
+      </article>
+      <article class="work rv">
+        <div class="browser"><div class="bar"><i></i><i></i><i></i></div><div class="mini m-barber">
+          <div class="m-nav"><b>Barber</b><i></i><i></i><i></i></div>
+          <div><div class="m-t">Стрижка и борода</div><div class="m-l s"></div><span class="m-btn">Записаться</span></div>
+          <div class="m-img"></div></div></div>
+        <div class="work-meta"><div class="row"><span class="niche">Барбершоп</span><span class="pill">Концепт</span></div><p>Тёмный стиль с золотом, мастера и онлайн-запись на первом экране.</p></div>
+      </article>
+      <article class="work rv">
+        <div class="browser"><div class="bar"><i></i><i></i><i></i></div><div class="mini m-vet">
+          <div class="m-nav"><b>Ветклиника</b><i></i><i></i></div>
+          <div><div class="m-t">Заботимся о&nbsp;питомце</div><div class="m-l s"></div><span class="m-btn">Позвонить</span></div>
+          <div class="m-img"></div></div></div>
+        <div class="work-meta"><div class="row"><span class="niche">Ветклиника</span><span class="pill">Концепт</span></div><p>Спокойные цвета, услуги и врачи — чтобы хозяину было не страшно.</p></div>
+      </article>
+      <article class="work rv">
+        <div class="browser"><div class="bar"><i></i><i></i><i></i></div><div class="mini m-tire">
+          <div class="m-nav"><b>Шины</b><i></i><i></i></div>
+          <div><div class="m-t">Шиномонтаж без очереди</div><span class="m-btn">Цены</span></div>
+          <div class="m-img"></div></div></div>
+        <div class="work-meta"><div class="row"><span class="niche">Шиномонтаж</span><span class="pill">Концепт</span></div><p>Крупно и контрастно: цены и адрес видно даже на ходу.</p></div>
+      </article>
+      <article class="work rv">
+        <div class="browser"><div class="bar"><i></i><i></i><i></i></div><div class="mini m-podo">
+          <div class="m-nav"><b>Подология</b><i></i><i></i></div>
+          <div><div class="m-t">Бережный уход за&nbsp;стопами</div><div class="m-l s"></div><span class="m-btn">Записаться</span></div>
+          <div class="m-img"></div></div></div>
+        <div class="work-meta"><div class="row"><span class="niche">Подология</span><span class="pill">Концепт</span></div><p>Мягкая медицинская эстетика, акцент на доверии и отзывах.</p></div>
+      </article>
+      <article class="work rv">
+        <div class="browser"><div class="bar"><i></i><i></i><i></i></div><div class="mini m-audio">
+          <div class="m-nav"><b>Car Audio</b><i></i><i></i></div>
+          <div><div class="m-t">Звук, который чувствуешь</div><span class="m-btn">Работы</span></div>
+          <div class="m-img"></div></div></div>
+        <div class="work-meta"><div class="row"><span class="niche">Автозвук</span><span class="pill">Концепт</span></div><p>Неон и эквалайзер — галерея установок вместо скучного прайса.</p></div>
+      </article>
+    </div>
+    <div class="works-note rv">
+      <p>Живые версии сайтов покажем в переписке — пришлём ссылки на примеры из вашей сферы.</p>
+      <a class="btn btn-accent" href="https://t.me/vitrinalab" target="_blank" rel="noopener">Показать примеры</a>
+    </div>
+  </div>
+</section>
+
+<section id="steps">
+  <div class="wrap">
+    <div class="head rv">
+      <div><span class="eyebrow">Как работаем</span><h2>Четыре шага<br>до запуска</h2></div>
+      <p>Вам не нужно ничего готовить заранее. Достаточно рассказать о бизнесе — остальное сделаем сами.</p>
+    </div>
+    <div class="steps">
+      <div class="step rv"><h3>Изучаем ваш бизнес</h3><p>Карточка на картах, фото, услуги, цены и отзывы клиентов. Только факты — ничего не придумываем.</p></div>
+      <div class="step free rv"><h3>Делаем демо бесплатно</h3><p>Собираем готовый сайт в уникальном дизайне. Это ни к чему вас не обязывает.</p></div>
+      <div class="step rv"><h3>Показываем и правим</h3><p>Смотрите на своём телефоне, говорите, что поменять, — доводим до идеала.</p></div>
+      <div class="step rv"><h3>Запускаем</h3><p>Подключаем домен, проверяем на всех устройствах и отдаём сайт вам.</p></div>
+    </div>
+  </div>
+</section>
+
+<section id="prices" style="padding-top:0">
+  <div class="wrap">
+    <div class="head rv">
+      <div><span class="eyebrow">Стоимость</span><h2>Платите за то,<br>что нужно вам</h2></div>
+      <p>Цену обговариваем индивидуально — после того, как вы увидели свой сайт и сказали, что в нём нужно. Оплата — только когда он вам понравился.</p>
+    </div>
+    <div class="prices">
+      <div class="price rv">
+        <h3>Одна страница</h3>
+        <div class="sum">Визитка</div>
+        <div class="for">Одна сильная страница о вашем бизнесе</div>
+        <ul>
+          <li>Уникальный дизайн</li>
+          <li>Удобно на телефоне и компьютере</li>
+          <li>Кнопки звонка и мессенджеров</li>
+          <li>Карта, адрес, часы работы</li>
+          <li>Отзывы клиентов</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://t.me/vitrinalab" target="_blank" rel="noopener">Обсудить</a>
+      </div>
+      <div class="price hot rv">
+        <h3>Сайт для роста</h3>
+        <div class="sum">Расширенный</div>
+        <div class="for">Полноценный сайт для роста</div>
+        <ul>
+          <li>Всё из одностраничного</li>
+          <li>До 5 страниц: услуги, меню, прайс</li>
+          <li>Галерея работ или интерьера</li>
+          <li>Кнопка онлайн-записи или заявка</li>
+          <li>Настройка для поиска Яндекса</li>
+        </ul>
+        <a class="btn" href="https://t.me/vitrinalab" target="_blank" rel="noopener">Узнать стоимость</a>
+      </div>
+      <div class="price rv">
+        <h3>Поддержка</h3>
+        <div class="sum">По желанию</div>
+        <div class="for">Чтобы сайт всегда был актуальным</div>
+        <ul>
+          <li>Хостинг и защищённое соединение</li>
+          <li>Обновляем цены, меню и фото</li>
+          <li>Мелкие правки по запросу</li>
+          <li>Следим, чтобы всё работало</li>
+        </ul>
+        <a class="btn btn-ghost" href="https://t.me/vitrinalab" target="_blank" rel="noopener">Подключить</a>
+      </div>
+    </div>
+    <p class="price-note rv">Домен оформляется на вас — сайт остаётся вашим, даже если решите уйти от нас. Предоплаты нет.</p>
+  </div>
+</section>
+
+<section id="faq" style="padding-top:0">
+  <div class="wrap faq-grid">
+    <div class="rv"><span class="eyebrow">Вопросы</span><h2 style="margin-top:18px">Частые<br>вопросы</h2></div>
+    <div class="rv">
+      <details open><summary>Сколько стоит сайт?</summary><p>Зависит от того, что нужно именно вам: одна страница или несколько, онлайн-запись, каталог, обновления. Сначала покажем демо — потом обговорим цену. Платите, только если всё устроило.</p></details>
+      <details><summary>Нужно ли что-то готовить заранее?</summary><p>Нет. Мы берём информацию из вашей карточки на картах и отзывов. От вас — проверить, что всё верно, и добавить то, чего там нет.</p></details>
+      <details><summary>А если сайт не понравится?</summary><p>Тогда вы ничего не платите. Демо-версию мы делаем за свой счёт — оплата только когда вы довольны результатом.</p></details>
+      <details><summary>Сколько времени занимает?</summary><p>Первый вариант — обычно за 2–3 дня. После ваших правок запускаем сайт на домене.</p></details>
+      <details><summary>Чей будет домен и сайт?</summary><p>Ваш. Домен регистрируется на вас, мы поможем с оформлением. Если захотите уйти — заберёте сайт с собой.</p></details>
+      <details><summary>Можно ли потом что-то поменять?</summary><p>Да. На поддержке обновляем цены, меню и фото по вашему сообщению. Без неё — правки по договорённости.</p></details>
+      <details><summary>Работаете только в Казани?</summary><p>Начинали с Казани, но сайты делаем для бизнеса из любого города — всё обсуждаем онлайн.</p></details>
+    </div>
+  </div>
+</section>
+
+<section class="cta">
+  <div class="wrap">
+    <div class="cta-box rv">
+      <div class="ring"></div>
+      <div>
+        <h2>Покажем ваш сайт раньше, чем попросим оплату</h2>
+        <p>Напишите название бизнеса — пришлём демо-версию через пару дней.</p>
+      </div>
+      <div class="cta-actions">
+        <a class="btn" href="https://t.me/vitrinalab" target="_blank" rel="noopener">Написать в Telegram
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M5 12h14M13 6l6 6-6 6"/></svg></a>
+        <a class="btn alt" href="https://instagram.com/vitrina.lab" target="_blank" rel="noopener">Instagram*
+          <svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2.4" stroke-linecap="round" stroke-linejoin="round"><path d="M7 17L17 7M8 7h9v9"/></svg></a>
+      </div>
+    </div>
+  </div>
+</section>
+</main>
+
+<footer>
+  <div class="wrap">
+    <div class="foot">
+      <a class="logo" href="#top"><img src="favicon.svg" alt="">витрина</a>
+      <div class="socials">
+        <a href="https://t.me/vitrinalab" target="_blank" rel="noopener" aria-label="Telegram"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M21.9 4.3l-3.2 15.1c-.2 1.1-.9 1.3-1.8.8l-4.9-3.6-2.4 2.3c-.3.3-.5.5-1 .5l.3-5 9.1-8.2c.4-.4-.1-.6-.6-.2L6.2 13 1.4 11.5c-1-.3-1.1-1 .2-1.5L20.5 2.8c.9-.3 1.7.2 1.4 1.5z"/></svg></a>
+        <a href="https://instagram.com/vitrina.lab" target="_blank" rel="noopener" aria-label="Instagram"><svg viewBox="0 0 24 24" fill="none" stroke="currentColor" stroke-width="2"><rect x="3" y="3" width="18" height="18" rx="5"/><circle cx="12" cy="12" r="4"/><circle cx="17.5" cy="6.5" r="1" fill="currentColor" stroke="none"/></svg></a>
+        <a href="https://www.tiktok.com/@vitrina.lab" target="_blank" rel="noopener" aria-label="TikTok"><svg viewBox="0 0 24 24" fill="currentColor"><path d="M16.6 2h-3.3v13.4a2.9 2.9 0 1 1-2.9-2.9c.3 0 .6 0 .9.1V9.2a6.2 6.2 0 1 0 5.3 6.2V8.6a7.6 7.6 0 0 0 4.4 1.4V6.7a4.4 4.4 0 0 1-4.4-4.7z"/></svg></a>
+      </div>
+    </div>
+    <p class="fine">© <span id="y">2026</span> Витрина — сайты для местного бизнеса.<br>* Instagram принадлежит компании Meta, деятельность которой признана экстремистской и запрещена в РФ.</p>
+  </div>
+</footer>
+
+<script>
+document.getElementById('y').textContent=new Date().getFullYear();
+const hdr=document.querySelector('header');
+addEventListener('scroll',()=>hdr.classList.toggle('scrolled',scrollY>10),{passive:true});
+document.querySelectorAll('.menu a').forEach(a=>a.addEventListener('click',()=>document.body.classList.remove('open')));
+const io=new IntersectionObserver(es=>es.forEach(e=>{if(e.isIntersecting){e.target.classList.add('in');io.unobserve(e.target)}}),{threshold:.12});
+document.querySelectorAll('.rv').forEach((el,i)=>{el.style.transitionDelay=(i%3)*80+'ms';io.observe(el)});
+</script>
+</body>
+</html>
